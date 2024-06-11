@@ -186,7 +186,7 @@ function App() {
               </div>
             </div>
             <div className="pt-48 sm:pt-0">
-              <img className="h-[330px] rounded-full inline-flex object-cover border-4  border-sky-500 shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-sky-400 text-sky-400" src="public/images/me2.png" alt="me" />
+              <img className="h-[330px] rounded-full inline-flex object-cover border-4  border-sky-500 shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-sky-400 text-sky-400" src="/images/me2.png" alt="me" />
             </div>
           </div>
         </div>
