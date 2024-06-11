@@ -75,6 +75,9 @@ function App() {
               </ul>
             </div>
             {/* mobile mode  */}
+            <div className="flex sm:hidden ml-32">
+              <SwitchTheme />
+            </div>
             <div className="flex sm:hidden">
               <button>
                 <a onClick={toggleMenu}>
@@ -84,14 +87,14 @@ function App() {
             </div>
           </div>
           <div className="block sm:hidden">
-            <div id="myLinks" className={`block ${menuOpen ? 'block delay-1000' : 'hidden'} fixed w-full mt-[68px] justify-center flex h-[300px] items-center z-50 right-0 bg-sky-300`}>
+            <div id="myLinks" className={`block ${menuOpen ? 'block delay-1000' : 'hidden'} fixed w-full mt-[68px] justify-center flex h-[300px] items-center z-50 right-0 bg-sky-300 dark:bg-sky-800`}>
               <ul>
                 <li>
                   <a
                     href="/#cover"
                     className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
                   >
-                    <button className="p-3" onClick={toggleMenu}>
+                    <button className="w-96 h-12 border border-gray-500 mb-2" onClick={toggleMenu}>
                       Home
                     </button>
                   </a>
@@ -101,7 +104,7 @@ function App() {
                     href="/#about"
                     className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
                   >
-                    <button className="p-3" onClick={toggleMenu}>
+                    <button className="w-96 h-12 border border-gray-500 mb-2" onClick={toggleMenu}>
                       About
                     </button>
                   </a>
@@ -111,7 +114,7 @@ function App() {
                     href="/#skill"
                     className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
                   >
-                    <button className="p-3" onClick={toggleMenu}>
+                    <button className="w-96 h-12 border border-gray-500 mb-2" onClick={toggleMenu}>
                       Skill
                     </button>
                   </a>
@@ -121,7 +124,7 @@ function App() {
                     href="/#project"
                     className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
                   >
-                    <button className="p-3" onClick={toggleMenu}>
+                    <button className="w-96 h-12 border border-gray-500 mb-2" onClick={toggleMenu}>
                       Projects
                     </button>
                   </a>
@@ -131,13 +134,10 @@ function App() {
                     href="/#contact"
                     className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
                   >
-                    <button className="p-3" onClick={toggleMenu}>
+                    <button className="w-96 h-12 border border-gray-500 mb-2" onClick={toggleMenu}>
                       Contact
                     </button>
                   </a>
-                </li>
-                <li>
-                  <SwitchTheme />
                 </li>
               </ul>
             </div>
@@ -186,7 +186,7 @@ function App() {
               </div>
             </div>
             <div className="pt-48 sm:pt-0">
-              <img className="h-[330px] rounded-full inline-flex object-cover border-4  border-sky-500 shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-sky-400 text-sky-400" src="/public/images/me2.png" alt="me" />
+              <img className="h-[330px] rounded-full inline-flex object-cover border-4  border-sky-500 shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-sky-400 text-sky-400" src="public/images/me2.png" alt="me" />
             </div>
           </div>
         </div>
@@ -219,19 +219,19 @@ function App() {
               </h2>
               <div className="flex flex-wrap sm:flex-row mx-auto justify-center my-3">
                 <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
-                  <img src="/public/images/nodejs.png" alt="nodejs" />
+                  <img src="public/images/nodejs.png" alt="nodejs" />
                   <p className="text-center font-serif dark:text-slate-200">Nodejs</p>
                 </div>
                 <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
-                  <img src="/public/images/express.png" alt="express" />
+                  <img src="public/images/express.png" alt="express" />
                   <p className="text-center font-serif dark:text-slate-200">Expressjs</p>
                 </div>
                 <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
-                  <img src="/public/images/postgresql.png" alt="postgresql" />
+                  <img src="public/images/postgresql.png" alt="postgresql" />
                   <p className="text-center font-serif dark:text-slate-200">Postgresql</p>
                 </div>
                 <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
-                  <img src="/public/images/mysql.png" alt="mysql" />
+                  <img src="public/images/mysql.png" alt="mysql" />
                   <p className="text-center font-serif dark:text-slate-200">My Sql</p>
                 </div>
               </div>
@@ -240,31 +240,31 @@ function App() {
               </h2>
               <div className="flex flex-wrap sm:flex-row mx-auto justify-center my-3">
                 <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
-                  <img src="/public/images/reactjs.png" alt="reactjs" />
+                  <img src="public/images/reactjs.png" alt="reactjs" />
                   <p className="text-center font-serif dark:text-slate-200">Reactjs</p>
                 </div>
                 <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
-                  <img src="/public/images/nextjs.png" alt="nextjs" />
+                  <img src="public/images/nextjs.png" alt="nextjs" />
                   <p className="text-center font-serif dark:text-slate-200">Nextjs</p>
                 </div>
                 <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
-                  <img src="/public/images/tailwindcss.png" alt="tailwindcss" />
+                  <img src="public/images/tailwindcss.png" alt="tailwindcss" />
                   <p className="text-center font-serif dark:text-slate-200">Tailwind CSS</p>
                 </div>
                 <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
-                  <img src="/public/images/bootstrap.png" alt="bootstrap" />
+                  <img src="public/images/bootstrap.png" alt="bootstrap" />
                   <p className="text-center font-serif dark:text-slate-200">Bootstrap</p>
                 </div>
                 <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
-                  <img src="/public/images/html.png" alt="html" />
+                  <img src="public/images/html.png" alt="html" />
                   <p className="text-center font-serif dark:text-slate-200">HTML</p>
                 </div>
                 <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
-                  <img src="/public/images/css.png" alt="css" />
+                  <img src="public/images/css.png" alt="css" />
                   <p className="text-center font-serif dark:text-slate-200">CSS</p>
                 </div>
                 <div className="mx-5 w-24 mb-5 sm:mb-0 my-5 sm:my-0 rounded-md p-2 shadow-md">
-                  <img src="/public/images/javascript.png" alt="javascript" />
+                  <img src="public/images/javascript.png" alt="javascript" />
                   <p className="text-center font-serif dark:text-slate-200">Javascript</p>
                 </div>
               </div>
@@ -283,7 +283,7 @@ function App() {
             <div className="flex flex-col sm:flex-row justify-center pb-10 items-center">
               <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-md">
                 <div className="justify-center flex">
-                  <img src="/public/images/online-shop.png" alt="contoh" className="h-48" />
+                  <img src="public/images/online-shop.png" alt="contoh" className="h-48" />
                 </div>
                 <h2 className="text-md font-bold mt-2 dark:text-slate-200">Online Shop</h2>
                 <p className='dark:text-slate-200'>With NodeJs, PostgreSQL and NextJs</p>
@@ -302,7 +302,7 @@ function App() {
               </div>
               <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-md">
                 <div className="justify-center flex">
-                  <img src="/public/images/web-note.png" alt="contoh" className="h-48" />
+                  <img src="public/images/web-note.png" alt="contoh" className="h-48" />
                 </div>
                 <h2 className="text-md font-bold mt-2 dark:text-slate-200">My Note</h2>
                 <p className='dark:text-slate-200'>With NodeJs, PostgreSQL and ReactJs</p>
@@ -321,7 +321,7 @@ function App() {
               </div>
               <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-md">
                 <div className="justify-center flex">
-                  <img src="/public/images/web-film.png" alt="contoh" className="h-48" />
+                  <img src="public/images/web-film.png" alt="contoh" className="h-48" />
                 </div>
                 <h2 className="text-md font-bold mt-2 dark:text-slate-200">Search Film</h2>
                 <p className='dark:text-slate-200'>With Reactjs and Film API</p>
