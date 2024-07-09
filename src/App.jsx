@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import TypeEffect from './TypeEffect';
-import ScrollTop from './ScrollTop';
-import AnimatedComponent from './AnimatedComponent';
+import TypeEffect from './lib/TypeEffect';
+import ScrollTop from './lib/ScrollTop';
+import AnimatedComponent from './animated/AnimatedComponent';
 import { FaCode } from "react-icons/fa6";
 import { MdOutlineDensityMedium } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
-import SwitchTheme from './SwitchTheme';
+import SwitchTheme from './lib/SwitchTheme';
+import AnimationSide from './animated/AnimatedSide'
+import AnimatedSide from './animated/AnimatedSide';
 
 function App() {
   const [showText, setShowText] = useState(true);
@@ -25,14 +27,14 @@ function App() {
         <nav className="pb-16">
           <div className="flex flex-row bg-sky-500 dark:bg-sky-900 py-5 px-5 sm:px-20 justify-between shadow-md top-0 left-0 right-0 fixed w-full">
             <div>
-              <h1 className="text-xl font-bold text-sky-950 dark:text-slate-200">My Portofolio</h1>
+              <h1 className="mint text-xl font-bold text-sky-950 dark:text-slate-200">Abdul Mufid</h1>
             </div>
             <div className="hidden sm:flex">
               <ul className="flex flex-row gap-5">
                 <li>
                   <a
                     href="/#home"
-                    className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer text-sky-950 mr-2 text-md dark:text-slate-200 hover:text-sky-200 dark:hover:text-sky-500"
                   >
                     Home
                   </a>
@@ -40,7 +42,7 @@ function App() {
                 <li>
                   <a
                     href="/#about"
-                    className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer text-sky-950 mr-2 text-md dark:text-slate-200 hover:text-sky-200 dark:hover:text-sky-500"
                   >
                     About
                   </a>
@@ -48,23 +50,23 @@ function App() {
                 <li>
                   <a
                     href="/#skill"
-                    className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer text-sky-950 mr-2 text-md dark:text-slate-200 hover:text-sky-200 dark:hover:text-sky-500"
                   >
-                    Skill
+                    Skills
                   </a>
                 </li>
                 <li>
                   <a
                     href="/#project"
-                    className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer text-sky-950 mr-2 text-md dark:text-slate-200 hover:text-sky-200 dark:hover:text-sky-500"
                   >
-                    Project
+                    Projects
                   </a>
                 </li>
                 <li>
                   <a
                     href="/#contact"
-                    className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer text-sky-950 mr-2 text-md dark:text-slate-200 hover:text-sky-200 dark:hover:text-sky-500"
                   >
                     Contact
                   </a>
@@ -78,7 +80,7 @@ function App() {
             <div className="flex sm:hidden ml-32">
               <SwitchTheme />
             </div>
-            <div className="flex sm:hidden">
+            <div className="flex sm:hidden dark:text-slate-200">
               <button>
                 <a onClick={toggleMenu}>
                   {menuOpen ? <IoMdClose className="w-7 h-7" /> : <MdOutlineDensityMedium className="w-7 h-7" />}
@@ -86,15 +88,15 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="block sm:hidden">
+          <div className="block sm:hidden text-sky-950 hover:text-sky-200">
             <div id="myLinks" className={`block ${menuOpen ? 'block delay-1000' : 'hidden'} fixed w-full mt-[68px] justify-center flex h-[300px] items-center z-50 right-0 bg-sky-300 dark:bg-sky-800`}>
               <ul>
                 <li>
                   <a
                     href="/#cover"
-                    className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer mr-2 text-md dark:text-slate-200"
                   >
-                    <button className="w-96 h-12 border border-gray-500 mb-2" onClick={toggleMenu}>
+                    <button className="w-96 h-12 border border-gray-500 mb-2 rounded-md" onClick={toggleMenu}>
                       Home
                     </button>
                   </a>
@@ -102,9 +104,9 @@ function App() {
                 <li>
                   <a
                     href="/#about"
-                    className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer mr-2 text-md dark:text-slate-200"
                   >
-                    <button className="w-96 h-12 border border-gray-500 mb-2" onClick={toggleMenu}>
+                    <button className="w-96 h-12 border border-gray-500 mb-2 rounded-md" onClick={toggleMenu}>
                       About
                     </button>
                   </a>
@@ -112,9 +114,9 @@ function App() {
                 <li>
                   <a
                     href="/#skill"
-                    className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer mr-2 text-md dark:text-slate-200"
                   >
-                    <button className="w-96 h-12 border border-gray-500 mb-2" onClick={toggleMenu}>
+                    <button className="w-96 h-12 border border-gray-500 mb-2 rounded-md" onClick={toggleMenu}>
                       Skill
                     </button>
                   </a>
@@ -122,9 +124,9 @@ function App() {
                 <li>
                   <a
                     href="/#project"
-                    className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer mr-2 text-md dark:text-slate-200"
                   >
-                    <button className="w-96 h-12 border border-gray-500 mb-2" onClick={toggleMenu}>
+                    <button className="w-96 h-12 border border-gray-500 mb-2 rounded-md" onClick={toggleMenu}>
                       Projects
                     </button>
                   </a>
@@ -132,9 +134,9 @@ function App() {
                 <li>
                   <a
                     href="/#contact"
-                    className="cursor-pointer text-sky-950 hover:text-sky-200 mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer mr-2 text-md dark:text-slate-200"
                   >
-                    <button className="w-96 h-12 border border-gray-500 mb-2" onClick={toggleMenu}>
+                    <button className="w-96 h-12 border border-gray-500 mb-2 rounded-md" onClick={toggleMenu}>
                       Contact
                     </button>
                   </a>
@@ -146,147 +148,190 @@ function App() {
       </section>
 
       <section id="cover">
-        {/* <div className="bg-bg-image bg-cover bg-center h-screen sm:h-[675px] w-full flex py-7"> */}
-        <div className="bg-gradient-to-r from-cyan-400 to-sky-700 dark:from-cyan-600 dark:to-sky-800 bg-cover bg-center h-screen sm:h-[675px] w-full flex py-7">
+        <div className="bg-gradient-to-r from-cyan-400 to-sky-700 dark:from-cyan-900 dark:bg-sky-900 bg-cover bg-center h-screen sm:h-[675px] w-full flex py-7">
           <div className="flex flex-col-reverse sm:flex-row h-[600px] w-full justify-center items-center ">
-            <div className="flex flex-col pr-0 sm:pr-80">
-              <div className="pb-5 pt-16 sm:pt-10">
-                <h1 className="text-3xl font-bold font-mono mb-3">
-                  Hi Everyone 👋
-                </h1>
-                <p className="text-2xl font-mono mb-3">
-                  <TypeEffect text="I'm Abdul Mufid" speed={130} />
-                </p>
-                {showText ? '' : (
+            <AnimationSide from='left'>
+              <div className="flex flex-col pr-0 sm:pr-80 dark:text-slate-200">
+                <div className="pb-5 pt-16 sm:pt-10">
+                  <h1 className="text-3xl font-bold font-mono mb-3">
+                    Hi Everyone 👋
+                  </h1>
                   <p className="text-2xl font-mono mb-3">
-                    <TypeEffect text="Fullstack Web Developer" speed={130} />
+                    <TypeEffect text="I'm Abdul Mufid" speed={130} />
                   </p>
-                )}
+                  {showText ? '' : (
+                    <p className="text-2xl font-mono mb-3">
+                      <TypeEffect text="Fullstack Web Developer" speed={130} />
+                    </p>
+                  )}
+                </div>
+                <div className='flex flex-row items-center'>
+                  <div>
+                    <a href="https://wa.link/vjqy4t" target="_blank">
+                      <button className="bg-green-600 px-4 py-3 text-sky-100 text-md rounded-md shadow-md hover:bg-green-400 flex flex-row mr-3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-6 h-6 mr-2"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                          />
+                        </svg>
+                        Contact me
+                      </button>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://drive.google.com/file/d/1EeppI6snzQzLt-hu2tEYMJifn6vj0hvt/view?usp=sharingt" target="_blank">
+                      <button className="bg-indigo-600 px-4 py-3 text-sky-100 text-md rounded-md shadow-md hover:bg-indigo-400 flex flex-row">
+                        Download CV
+                      </button>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div>
-                <a href="https://wa.link/vjqy4t" target="_blank">
-                  <button className="bg-green-600 px-4 py-3 text-sky-100 text-md rounded-md shadow-md hover:bg-green-400 flex flex-row">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6 mr-2"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-                      />
-                    </svg>
-                    Contact me
-                  </button>
-                </a>
+            </AnimationSide>
+            <AnimationSide from='right'>
+              <div className="pt-48 sm:pt-0">
+                <img
+                  className="h-[320px] rounded-full object-cover border-4 border-sky-500 dark:border-sky-700"
+                  src="/images/me2.png" alt="me" />
               </div>
-            </div>
-            <div className="pt-48 sm:pt-0">
-              <img className="h-[330px] rounded-full inline-flex object-cover border-4  border-sky-500 shadow-[5px_5px_0_0_rgba(0,0,0,1)] shadow-sky-400 text-sky-400" src="/images/me2.png" alt="me" />
-            </div>
+            </AnimationSide>
           </div>
         </div>
       </section>
 
-      <AnimatedComponent>
-        <section id="about">
-          <div className="py-20 px-5 sm:px-80 text-center">
-            <h1 className="text-3xl font-bold font-mono mb-7 dark:text-slate-200">About me</h1>
-            <p className="text-md font-serif dark:text-slate-200">
-              I am Abdul Mufid, a graduate of the National Institute of Technology Malang in 2023.
-              I am an enthusiastic fullstack web developer. I can create a restful API backend
-              with Nodejs Expressjs with a Postgresql or My Sql database and create a frontend with
-              Nextjs or Reactjs. I have experience in creating simple online shop websites and film search websites.
-            </p>
+      <section id="about">
+        <AnimatedComponent>
+          <div className='flex flex-col sm:flex-row justify-center sm:justify-between items-center px-5 sm:px-52 min-h-screen py-5 sm:py-20'>
+            <AnimatedSide from='left'>
+              <div>
+                <img src="/images/programmer.png" alt="programmer" className='w-[400px]' />
+              </div>
+            </AnimatedSide>
+            <div className="w-96 sm:w-[500px] text-center sm:text-left mt-5">
+              <h1 className="text-3xl font-bold font-mono mb-7 dark:text-slate-200">About me</h1>
+              <p className="text-md font-serif dark:text-slate-200">
+                I am Abdul Mufid, a graduate of the National Institute of Technology Malang in 2023.
+                I am passionate and enthusiastic about developing web application. I can create a restful API backend
+                with Nodejs Expressjs with a Postgresql or My Sql database and create a frontend with
+                Nextjs or Reactjs. I have experience creating simple online shop websites, film searches and other websites.
+              </p>
+            </div>
           </div>
-        </section>
-      </AnimatedComponent>
+        </AnimatedComponent>
+      </section>
       <hr />
 
-      <AnimatedComponent>
-        <section id="skill">
-          <div className="py-20">
-            <h1 className="text-3xl font-bold font-mono mb-3 text-center pb-5 dark:text-slate-200">
-              Skill
-            </h1>
-            <div className="flex flex-col px-10 sm:px-80 justify-center mx-auto">
-              <h2 className="font-bold text-center font-mono text-xl underline underline-offset-1 dark:text-slate-200">
+      <section id="skill">
+        <div className="min-h-screen flex flex-col items-center justify-center py-10">
+          <h1 className="text-3xl font-bold font-mono mb-3 text-center pb-5 dark:text-slate-200">
+            Skills
+          </h1>
+          <div className="flex flex-col px-10 sm:px-52 justify-center mx-auto">
+            <AnimatedSide from='left'>
+              <h2 className="font-bold text-center font-mono text-xl dark:text-slate-200">
                 Backend
               </h2>
               <div className="flex flex-wrap sm:flex-row mx-auto justify-center my-3">
-                <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
                   <img src="/images/nodejs.png" alt="nodejs" />
-                  <p className="text-center font-serif dark:text-slate-200">Nodejs</p>
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">NodeJS</p>
                 </div>
-                <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
                   <img src="/images/express.png" alt="express" />
-                  <p className="text-center font-serif dark:text-slate-200">Expressjs</p>
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">ExpressJS</p>
                 </div>
-                <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
                   <img src="/images/postgresql.png" alt="postgresql" />
-                  <p className="text-center font-serif dark:text-slate-200">Postgresql</p>
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">PostgreSQL</p>
                 </div>
-                <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
                   <img src="/images/mysql.png" alt="mysql" />
-                  <p className="text-center font-serif dark:text-slate-200">My Sql</p>
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">My SQL</p>
+                </div>
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105 justify-between">
+                  <img src="https://logowik.com/content/uploads/images/mongodb9740.logowik.com.webp" alt="mongodb" className='rounded-md mb-3' />
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">MongoDB</p>
                 </div>
               </div>
-              <h2 className="font-bold text-center font-mono text-xl underline underline-offset-1 dark:text-slate-200">
+            </AnimatedSide>
+            <AnimatedSide from='right'>
+              <h2 className="font-bold text-center font-mono text-xl dark:text-slate-200">
                 Frontend
               </h2>
               <div className="flex flex-wrap sm:flex-row mx-auto justify-center my-3">
-                <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
                   <img src="/images/reactjs.png" alt="reactjs" />
-                  <p className="text-center font-serif dark:text-slate-200">Reactjs</p>
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">ReactJS</p>
                 </div>
-                <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
                   <img src="/images/nextjs.png" alt="nextjs" />
-                  <p className="text-center font-serif dark:text-slate-200">Nextjs</p>
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">NextJS</p>
                 </div>
-                <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
-                  <img src="/images/tailwindcss.png" alt="tailwindcss" />
-                  <p className="text-center font-serif dark:text-slate-200">Tailwind CSS</p>
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
+                  <img src="/images/tailwindcss.png" alt="tailwindcss" className='mb-2' />
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">Tailwind CSS</p>
                 </div>
-                <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
                   <img src="/images/bootstrap.png" alt="bootstrap" />
-                  <p className="text-center font-serif dark:text-slate-200">Bootstrap</p>
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">Bootstrap</p>
                 </div>
-                <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
+                  <img src="https://avatars.githubusercontent.com/u/54212428?s=280&v=4" alt="cakra ui" className='rounded-md' />
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">Cakra UI</p>
+                </div>
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
                   <img src="/images/html.png" alt="html" />
-                  <p className="text-center font-serif dark:text-slate-200">HTML</p>
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">HTML</p>
                 </div>
-                <div className="mx-5 w-24 my-5 rounded-md p-2 shadow-md">
+                <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
                   <img src="/images/css.png" alt="css" />
-                  <p className="text-center font-serif dark:text-slate-200">CSS</p>
-                </div>
-                <div className="mx-5 w-24 mb-5 sm:mb-0 my-5 sm:my-0 rounded-md p-2 shadow-md">
-                  <img src="/images/javascript.png" alt="javascript" />
-                  <p className="text-center font-serif dark:text-slate-200">Javascript</p>
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">CSS</p>
                 </div>
               </div>
-            </div>
+            </AnimatedSide>
+            <AnimatedSide from='left'>
+              <h2 className="font-bold text-center font-mono text-xl dark:text-slate-200">
+                Programming language
+              </h2>
+              <div className="flex flex-wrap sm:flex-row mx-auto justify-center my-3">
+                <div className="mx-2 w-20 sm:w-24 mb-5 sm:mb-0 my-5 sm:my-0 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
+                  <img src="/images/javascript.png" alt="javascript" className='rounded-md' />
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">Javascript</p>
+                </div>
+                <div className="mx-2 w-20 sm:w-24 mb-5 sm:mb-0 my-5 sm:my-0 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
+                  <img src="https://static-00.iconduck.com/assets.00/typescript-plain-icon-256x256-ypojgpyj.png" alt="javascript" className='rounded-md' />
+                  <p className="text-center font-serif dark:text-slate-200 text-sm">Typescript</p>
+                </div>
+              </div>
+            </AnimatedSide>
           </div>
-        </section>
-      </AnimatedComponent>
+        </div>
+      </section>
       <hr />
 
-      <AnimatedComponent>
-        <section id="project">
-          <div className='py-20'>
-            <h1 className="text-3xl font-bold font-mono pb-7 text-center dark:text-slate-200">
-              Project Website
-            </h1>
-            <div className="flex flex-col sm:flex-row justify-center pb-10 items-center">
-              <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-md">
+      <section id="project">
+        <div className='min-h-screen flex flex-col items-center justify-center py-10'>
+          <h1 className="text-3xl font-bold font-mono pb-7 text-center dark:text-slate-200">
+            Projects
+          </h1>
+          <div className="flex flex-col sm:flex-row justify-center pb-10 items-center">
+            <AnimatedSide from='left'>
+              <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-lg">
                 <div className="justify-center flex">
                   <img src="/images/online-shop.png" alt="contoh" className="h-48" />
                 </div>
-                <h2 className="text-md font-bold mt-2 dark:text-slate-200">Online Shop</h2>
-                <p className='dark:text-slate-200'>With NodeJs, PostgreSQL and NextJs</p>
+                <h2 className="text-md font-bold mt-2 dark:text-slate-200 mb-2">Online Shop</h2>
+                <p className='dark:text-slate-200 text-sm mb-1'>With NodeJs, PostgreSQL and NextJs</p>
+                <p className='dark:text-slate-200 text-sm'>This online shop website is intended to provide all baby needs.</p>
                 <div className="flex justify-end mt-4">
                   <a href="https://github.com/groupfswd" target="_blank">
                     <button className="bg-purple-500 hover:bg-purple-400 text-white py-3 px-5 rounded mr-2">
@@ -300,12 +345,15 @@ function App() {
                   {/* </a> */}
                 </div>
               </div>
-              <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-md">
+            </AnimatedSide>
+            <AnimatedComponent>
+              <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-lg">
                 <div className="justify-center flex">
                   <img src="/images/web-note.png" alt="contoh" className="h-48" />
                 </div>
-                <h2 className="text-md font-bold mt-2 dark:text-slate-200">My Note</h2>
-                <p className='dark:text-slate-200'>With NodeJs, PostgreSQL and ReactJs</p>
+                <h2 className="text-md font-bold mt-2 dark:text-slate-200 mb-2">My Note</h2>
+                <p className='dark:text-slate-200 text-sm mb-1'>With NodeJs, PostgreSQL and ReactJs</p>
+                <p className='dark:text-slate-200 text-sm'>This website makes it easy to record all important things easily.</p>
                 <div className="flex justify-end mt-4">
                   <a href="https://github.com/amufid/server_mynote" target="_blank">
                     <button className="bg-purple-500 hover:bg-purple-400 text-white py-3 px-5 rounded mr-2">
@@ -319,12 +367,15 @@ function App() {
                   {/* </a> */}
                 </div>
               </div>
-              <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-md">
+            </AnimatedComponent>
+            <AnimatedSide>
+              <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-lg">
                 <div className="justify-center flex">
                   <img src="/images/web-film.png" alt="contoh" className="h-48" />
                 </div>
-                <h2 className="text-md font-bold mt-2 dark:text-slate-200">Search Film</h2>
-                <p className='dark:text-slate-200'>With Reactjs and Film API</p>
+                <h2 className="text-md font-bold mt-2 dark:text-slate-200 mb-2">Search Film</h2>
+                <p className='dark:text-slate-200 text-sm mb-1'>With Reactjs and Film API</p>
+                <p className='dark:text-slate-200 text-sm'>This website displays popular films and can search for film titles.</p>
                 <div className="flex justify-end mt-4">
                   <a href="https://github.com/amufid/movie_reactjs_api.git" target="_blank">
                     <button className="bg-purple-500 hover:bg-purple-400 text-white py-3 px-5 rounded mr-2">
@@ -338,15 +389,15 @@ function App() {
                   </a>
                 </div>
               </div>
-            </div>
+            </AnimatedSide>
           </div>
-        </section>
-      </AnimatedComponent>
+        </div>
+      </section>
       <hr />
 
-      <AnimatedComponent>
-        <section id="contact">
-          <div className="py-20">
+      <section id="contact">
+        <AnimatedComponent>
+          <div className="min-h-screen flex flex-col items-center justify-center">
             <div className="flex flex-col justify-center border border-slate-300 rounded-md mx-auto w-[350px]">
               <h1 className="text-3xl font-bold font-mono text-center pt-7 dark:text-slate-200">
                 Contact Me
@@ -388,10 +439,8 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
-      </AnimatedComponent>
-
-      <ScrollTop />
+        </AnimatedComponent>
+      </section>
 
       <section>
         <footer>
@@ -417,6 +466,8 @@ function App() {
           </div>
         </footer>
       </section>
+
+      <ScrollTop />
     </div>
   );
 }
