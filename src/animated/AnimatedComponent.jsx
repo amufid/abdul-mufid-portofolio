@@ -19,6 +19,7 @@ const AnimatedSection = ({ children }) => {
       animate={inView ? 'visible' : 'hidden'}
       variants={variants}
       transition={{ duration: 1.5 }}
+      className='relative'
     >
       {children}
     </motion.div>
