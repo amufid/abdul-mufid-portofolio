@@ -6,12 +6,12 @@ import { FaCode } from "react-icons/fa6";
 import { MdOutlineDensityMedium } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import SwitchTheme from './lib/SwitchTheme';
-import AnimationSide from './animated/AnimatedSide'
 import AnimatedSide from './animated/AnimatedSide';
 
 function App() {
   const [showText, setShowText] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isActive, setIsActive] = useState(null);
 
   setTimeout(() => {
     setShowText(false);
@@ -21,54 +21,42 @@ function App() {
     setMenuOpen(!menuOpen);
   };
 
+  const active = "w-20 h-10 opacity-80 bg-sky-200 dark:bg-sky-800 font-medium rounded-sm border-b-4 border-sky-300 dark:border-sky-600 text-slate-700 text-md dark:text-slate-200 hover:bg-sky-200 dark:hover:bg-sky-700"
+  const notActive = "w-20 h-10 text-slate-700 text-md font-medium dark:text-slate-200 hover:bg-white/30 dark:hover:bg-sky-700 rounded-sm"
+
   return (
     <div className='dark:bg-sky-950'>
       <section id="home">
-        <nav className="pb-16">
-          <div className="flex flex-row bg-sky-500 dark:bg-sky-900 py-5 px-5 sm:px-20 justify-between shadow-md top-0 left-0 right-0 fixed w-full">
+        <nav className="">
+          <div className="flex flex-row backdrop-opacity-10 backdrop-invert bg-white/20 dark:bg-white/10 py-3 px-5 sm:px-20 justify-between shadow-md top-0 left-0 right-0 fixed w-full items-center z-20">
             <div>
               <h1 className="mint text-xl font-bold text-sky-950 dark:text-slate-200">Abdul Mufid</h1>
             </div>
             <div className="hidden sm:flex">
-              <ul className="flex flex-row gap-5">
+              <ul className="flex flex-row gap-2">
                 <li>
-                  <a
-                    href="/#home"
-                    className="cursor-pointer text-sky-950 mr-2 text-md dark:text-slate-200 hover:text-sky-200 dark:hover:text-sky-500"
-                  >
-                    Home
+                  <a href="/#home" className="cursor-pointer">
+                    <button className={isActive === 1 ? active : notActive} onClick={() => setIsActive(1)}>Home</button>
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/#about"
-                    className="cursor-pointer text-sky-950 mr-2 text-md dark:text-slate-200 hover:text-sky-200 dark:hover:text-sky-500"
-                  >
-                    About
+                  <a href="/#about" className="cursor-pointer">
+                    <button className={isActive === 2 ? active : notActive} onClick={() => setIsActive(2)}>About</button>
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/#skill"
-                    className="cursor-pointer text-sky-950 mr-2 text-md dark:text-slate-200 hover:text-sky-200 dark:hover:text-sky-500"
-                  >
-                    Skills
+                  <a href="/#skill" className="cursor-pointer">
+                    <button className={isActive === 3 ? active : notActive} onClick={() => setIsActive(3)}>Skills</button>
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/#project"
-                    className="cursor-pointer text-sky-950 mr-2 text-md dark:text-slate-200 hover:text-sky-200 dark:hover:text-sky-500"
-                  >
-                    Projects
+                  <a href="/#project" className="cursor-pointer">
+                    <button className={isActive === 4 ? active : notActive} onClick={() => setIsActive(4)}>Projects</button>
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/#contact"
-                    className="cursor-pointer text-sky-950 mr-2 text-md dark:text-slate-200 hover:text-sky-200 dark:hover:text-sky-500"
-                  >
-                    Contact
+                  <a href="/#contact" className="cursor-pointer">
+                    <button className={isActive === 5 ? active : notActive} onClick={() => setIsActive(5)}>Contact</button>
                   </a>
                 </li>
                 <li>
@@ -89,7 +77,7 @@ function App() {
             </div>
           </div>
           <div className="block sm:hidden text-sky-950 hover:text-sky-200">
-            <div id="myLinks" className={`block ${menuOpen ? 'block delay-1000' : 'hidden'} fixed w-full mt-[68px] justify-center flex h-[300px] items-center z-50 right-0 bg-sky-300 dark:bg-sky-800`}>
+            <div id="myLinks" className={`block ${menuOpen ? 'block delay-1000' : 'hidden'} fixed w-full mt-[60px] justify-center flex h-[300px] items-center z-50 right-0 bg-sky-300 dark:bg-sky-800`}>
               <ul>
                 <li>
                   <a
@@ -148,9 +136,9 @@ function App() {
       </section>
 
       <section id="cover">
-        <div className="bg-gradient-to-r from-cyan-400 to-sky-700 dark:from-cyan-900 dark:bg-sky-900 bg-cover bg-center h-screen sm:h-[675px] w-full flex py-7">
+        <div className="bg-gradient-to-r from-cyan-400 to-sky-700 dark:from-cyan-900 dark:to-cyan-950 dark:bg-sky-900 bg-cover bg-center h-screen w-full flex py-7 items-center">
           <div className="flex flex-col-reverse sm:flex-row h-[600px] w-full justify-center items-center ">
-            <AnimationSide from='left'>
+            <AnimatedComponent>
               <div className="flex flex-col pr-0 sm:pr-80 dark:text-slate-200">
                 <div className="pb-5 pt-16 sm:pt-10">
                   <h1 className="text-3xl font-bold font-mono mb-3">
@@ -196,14 +184,14 @@ function App() {
                   </div>
                 </div>
               </div>
-            </AnimationSide>
-            <AnimationSide from='right'>
-              <div className="pt-48 sm:pt-0">
+            </AnimatedComponent>
+            <AnimatedComponent>
+              <div className="pt-20 sm:pt-0">
                 <img
-                  className="h-[320px] rounded-full object-cover border-4 border-sky-500 dark:border-sky-700"
+                  className="h-[277px] sm:h-[320px] rounded-full object-cover border-4 border-sky-500 dark:border-sky-700"
                   src="/images/me2.png" alt="me" />
               </div>
-            </AnimationSide>
+            </AnimatedComponent>
           </div>
         </div>
       </section>
@@ -320,12 +308,12 @@ function App() {
 
       <section id="project">
         <div className='min-h-screen flex flex-col items-center justify-center py-10'>
-          <h1 className="text-3xl font-bold font-mono pb-7 text-center dark:text-slate-200">
+          <h1 className="text-3xl font-bold font-mono pb-20 text-center dark:text-slate-200">
             Projects
           </h1>
           <div className="flex flex-col sm:flex-row justify-center pb-10 items-center">
-            <AnimatedSide from='left'>
-              <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-lg">
+            <AnimatedComponent>
+              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900">
                 <div className="justify-center flex">
                   <img src="/images/online-shop.png" alt="contoh" className="h-48" />
                 </div>
@@ -345,15 +333,27 @@ function App() {
                   {/* </a> */}
                 </div>
               </div>
-            </AnimatedSide>
+            </AnimatedComponent>
+
             <AnimatedComponent>
-              <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-lg">
-                <div className="justify-center flex">
-                  <img src="/images/web-note.png" alt="contoh" className="h-48" />
-                </div>
+              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900">
+                <a href="https://youtu.be/xPO_6Bx20wk?si=iFcnhg57CtZPrxzc" target='_blank'>
+                  <div className="justify-center flex relative group">
+                    <img src="/images/web-note.png" alt="contoh" className="h-48 object-cover" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <svg
+                        className="w-12 h-12 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" d="M6 4l10 6-10 6V4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
                 <h2 className="text-md font-bold mt-2 dark:text-slate-200 mb-2">My Note</h2>
                 <p className='dark:text-slate-200 text-sm mb-1'>With NodeJs, PostgreSQL and ReactJs</p>
-                <p className='dark:text-slate-200 text-sm'>This website makes it easy to record all important things easily.</p>
+                <p className='dark:text-slate-200 text-sm'>This website makes it easy to record all important things easily.(In development)</p>
                 <div className="flex justify-end mt-4">
                   <a href="https://github.com/amufid/server_mynote" target="_blank">
                     <button className="bg-purple-500 hover:bg-purple-400 text-white py-3 px-5 rounded mr-2">
@@ -368,8 +368,9 @@ function App() {
                 </div>
               </div>
             </AnimatedComponent>
-            <AnimatedSide>
-              <div className="border rounded-md w-80 p-3 mx-2 my-2 shadow-lg">
+
+            <AnimatedComponent>
+              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900">
                 <div className="justify-center flex">
                   <img src="/images/web-film.png" alt="contoh" className="h-48" />
                 </div>
@@ -389,7 +390,41 @@ function App() {
                   </a>
                 </div>
               </div>
-            </AnimatedSide>
+            </AnimatedComponent>
+
+            <AnimatedComponent>
+              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900">
+                <a href="https://www.youtube.com/watch?v=BHRqfrj3kyE" className='hover:opacity-65' target='_blank'>
+                  <div className="justify-center flex relative group">
+                    <img src="https://i.ibb.co.com/DkJYrqN/Screenshot-2024-07-13-203338.png" alt="contoh" className="h-48 object-cover" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <svg
+                        className="w-12 h-12 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" d="M6 4l10 6-10 6V4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+                <h2 className="text-md font-bold mt-2 dark:text-slate-200 mb-2">ChatApp</h2>
+                <p className='dark:text-slate-200 text-sm mb-1'>With Nodejs, MongoDB and Reactjs</p>
+                <p className='dark:text-slate-200 text-sm'>This is a real time web chat with the socket.io library. (In development)</p>
+                <div className="flex justify-end mt-4">
+                  <a href="https://github.com/amufid/chat-app-websocket.git" target="_blank">
+                    <button className="bg-purple-500 hover:bg-purple-400 text-white py-3 px-5 rounded mr-2">
+                      <FaCode />
+                    </button>
+                  </a>
+                  {/* <a href="" target='_blank'> */}
+                  <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded">
+                    Visit
+                  </button>
+                  {/* </a> */}
+                </div>
+              </div>
+            </AnimatedComponent>
           </div>
         </div>
       </section>
@@ -398,7 +433,7 @@ function App() {
       <section id="contact">
         <AnimatedComponent>
           <div className="min-h-screen flex flex-col items-center justify-center">
-            <div className="flex flex-col justify-center border border-slate-300 rounded-md mx-auto w-[350px]">
+            <div className="flex flex-col justify-center rounded-md mx-auto w-[350px] bg-slate-200 dark:bg-sky-900 shadow-lg">
               <h1 className="text-3xl font-bold font-mono text-center pt-7 dark:text-slate-200">
                 Contact Me
               </h1>
@@ -417,7 +452,7 @@ function App() {
                   Phone number
                 </label>
                 <input
-                  type="text"
+                  type="number"
                   placeholder="Phone number"
                   className="w-full mt-1 px-3 py-2 text-black dark:text-slate-200 bg-white dark:bg-slate-700 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
                 />
