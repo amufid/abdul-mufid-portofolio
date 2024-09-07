@@ -2,7 +2,7 @@ import { useState } from 'react';
 import TypeEffect from './lib/TypeEffect';
 import ScrollTop from './lib/ScrollTop';
 import AnimatedComponent from './animated/AnimatedComponent';
-import { FaCode } from "react-icons/fa6";
+// import { FaCode } from "react-icons/fa6";
 import { MdOutlineDensityMedium } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import SwitchTheme from './lib/SwitchTheme';
@@ -21,14 +21,14 @@ function App() {
     setMenuOpen(!menuOpen);
   };
 
-  const active = "w-20 h-10 opacity-80 bg-sky-200 dark:bg-sky-800 font-medium rounded-sm border-b-4 border-sky-300 dark:border-sky-600 text-slate-700 text-md dark:text-slate-200 hover:bg-sky-200 dark:hover:bg-sky-700"
+  const active = "w-20 h-10 opacity-80 bg-sky-200 dark:bg-sky-800 font-medium rounded-sm border-b-4 border-sky-300 dark:border-sky-600 text-blue-900 text-md dark:text-blue-100 hover:bg-sky-200 dark:hover:bg-sky-700"
   const notActive = "w-20 h-10 text-slate-700 text-md font-medium dark:text-slate-200 hover:bg-white/30 dark:hover:bg-sky-700 rounded-sm"
 
   return (
     <div className='dark:bg-sky-950'>
       <section id="home">
-        <nav className="">
-          <div className="flex flex-row backdrop-opacity-10 backdrop-invert bg-white/20 dark:bg-white/10 py-3 px-5 sm:px-20 justify-between shadow-md top-0 left-0 right-0 fixed w-full items-center z-20">
+        <nav>
+          <div className="flex grid-cols-4 backdrop-opacity-10 backdrop-invert bg-white/20 dark:bg-white/10 py-3 px-5 sm:px-20 justify-between shadow-md top-0 left-0 right-0 fixed w-full items-center z-20">
             <div>
               <h1 className="mint text-xl font-bold text-sky-950 dark:text-slate-200">Abdul Mufid</h1>
             </div>
@@ -76,15 +76,15 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="block sm:hidden text-sky-950 hover:text-sky-200">
-            <div id="myLinks" className={`block ${menuOpen ? 'block delay-1000' : 'hidden'} fixed w-full mt-[60px] justify-center flex h-[300px] items-center z-50 right-0 bg-sky-300 dark:bg-sky-800`}>
+          <div className="block sm:hidden text-sky-950 dark:text-slate-200 text-xl">
+            <div id="myLinks" className={`block ${menuOpen ? 'block delay-1000' : 'hidden'} fixed w-full mt-[60px] justify-center flex h-[300px] items-center z-50 right-0 bg-sky-400 dark:bg-sky-800`}>
               <ul>
                 <li>
                   <a
                     href="/#cover"
-                    className="cursor-pointer mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer mr-2 hover:scale-110"
                   >
-                    <button className="w-96 h-12 border border-gray-500 mb-2 rounded-md" onClick={toggleMenu}>
+                    <button className="w-96 h-12 mb-2 rounded-md hover:bg-sky-300 hover:scale-110" onClick={toggleMenu}>
                       Home
                     </button>
                   </a>
@@ -92,9 +92,9 @@ function App() {
                 <li>
                   <a
                     href="/#about"
-                    className="cursor-pointer mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer mr-2"
                   >
-                    <button className="w-96 h-12 border border-gray-500 mb-2 rounded-md" onClick={toggleMenu}>
+                    <button className="w-96 h-12 mb-2 rounded-md hover:bg-sky-300 hover:scale-110" onClick={toggleMenu}>
                       About
                     </button>
                   </a>
@@ -102,9 +102,9 @@ function App() {
                 <li>
                   <a
                     href="/#skill"
-                    className="cursor-pointer mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer mr-2"
                   >
-                    <button className="w-96 h-12 border border-gray-500 mb-2 rounded-md" onClick={toggleMenu}>
+                    <button className="w-96 h-12 mb-2 rounded-md hover:bg-sky-300 hover:scale-110" onClick={toggleMenu}>
                       Skill
                     </button>
                   </a>
@@ -112,9 +112,9 @@ function App() {
                 <li>
                   <a
                     href="/#project"
-                    className="cursor-pointer mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer mr-2"
                   >
-                    <button className="w-96 h-12 border border-gray-500 mb-2 rounded-md" onClick={toggleMenu}>
+                    <button className="w-96 h-12 mb-2 rounded-md hover:bg-sky-300 hover:scale-110" onClick={toggleMenu}>
                       Projects
                     </button>
                   </a>
@@ -122,9 +122,9 @@ function App() {
                 <li>
                   <a
                     href="/#contact"
-                    className="cursor-pointer mr-2 text-md dark:text-slate-200"
+                    className="cursor-pointer mr-2"
                   >
-                    <button className="w-96 h-12 border border-gray-500 mb-2 rounded-md" onClick={toggleMenu}>
+                    <button className="w-96 h-12 mb-2 rounded-md hover:bg-sky-300 hover:scale-110" onClick={toggleMenu}>
                       Contact
                     </button>
                   </a>
@@ -141,22 +141,22 @@ function App() {
             <AnimatedComponent>
               <div className="flex flex-col pr-0 sm:pr-80 dark:text-slate-200">
                 <div className="pb-5 pt-16 sm:pt-10">
-                  <h1 className="text-3xl font-bold font-mono mb-3">
+                  <h1 className="text-2xl sm:text-3xl font-bold font-mono mb-3">
                     Hi Everyone 👋
                   </h1>
-                  <p className="text-2xl font-mono mb-3">
+                  <p className="text-2xl sm:text-3xl font-mono mb-3">
                     <TypeEffect text="I'm Abdul Mufid" speed={130} />
                   </p>
                   {showText ? '' : (
-                    <p className="text-2xl font-mono mb-3">
-                      <TypeEffect text="Fullstack Web Developer" speed={130} />
+                    <p className="text-2xl sm:text-3xl font-mono mb-3">
+                      <TypeEffect text="Frontend Developer" speed={130} />
                     </p>
                   )}
                 </div>
                 <div className='flex flex-row items-center'>
                   <div>
                     <a href="https://wa.link/vjqy4t" target="_blank">
-                      <button className="bg-green-600 px-4 py-3 text-sky-100 text-md rounded-md shadow-md hover:bg-green-400 flex flex-row mr-3">
+                      <button className="bg-green-600 px-4 py-3 text-sky-100 text-md rounded-full shadow-md hover:bg-green-400 flex flex-row mr-3">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -176,8 +176,8 @@ function App() {
                     </a>
                   </div>
                   <div>
-                    <a href="https://drive.google.com/file/d/1EeppI6snzQzLt-hu2tEYMJifn6vj0hvt/view?usp=sharingt" target="_blank">
-                      <button className="bg-indigo-600 px-4 py-3 text-sky-100 text-md rounded-md shadow-md hover:bg-indigo-400 flex flex-row">
+                    <a href="https://drive.google.com/file/d/1DbOzXnrwd7Api1vMjtMEnozNiVdE503V/view?usp=sharing" target="_blank">
+                      <button className="bg-indigo-600 px-4 py-3 text-sky-100 text-md rounded-full shadow-md hover:bg-indigo-400 flex flex-row">
                         Download CV
                       </button>
                     </a>
@@ -188,7 +188,7 @@ function App() {
             <AnimatedComponent>
               <div className="pt-20 sm:pt-0">
                 <img
-                  className="h-[277px] sm:h-[320px] rounded-full object-cover border-4 border-sky-500 dark:border-sky-700"
+                  className="photo-profile w-[250px] sm:w-[300px] h-auto rounded-full object-cover border-4 border-sky-600 dark:border-sky-700 transition-shadow duration-300"
                   src="/images/me2.png" alt="me" />
               </div>
             </AnimatedComponent>
@@ -206,17 +206,16 @@ function App() {
             </AnimatedSide>
             <div className="w-96 sm:w-[500px] text-center sm:text-left mt-5">
               <h1 className="text-3xl font-bold font-mono mb-7 dark:text-slate-200">About me</h1>
-              <p className="text-md font-serif dark:text-slate-200">
-                I am Abdul Mufid, a graduate of the National Institute of Technology Malang in 2023.
-                I am passionate and enthusiastic about developing web application. I can create a restful API backend
-                with Nodejs Expressjs with a Postgresql or My Sql database and create a frontend with
-                Nextjs or Reactjs. I have experience creating simple online shop websites, film searches and other websites.
+              <p className="text-md font-serif dark:text-slate-200 text-justify">
+                I graduated from Institut Teknologi Nasional Malang with a degree in Informatics Engineering. I
+                am passionate and enthusiastic about developing web applications. I ready to contribute with the skills I gained from a bootcamp at Rakamin.
+                I have experience building web applications using HTML, CSS, JavaScript, Tailwind CSS and React.js, and I am
+                familiar with tools like Git. I can create a restful API with Nodejs Expressjs with a Postgresql or My Sql databases.
               </p>
             </div>
           </div>
         </AnimatedComponent>
       </section>
-      <hr />
 
       <section id="skill">
         <div className="min-h-screen flex flex-col items-center justify-center py-10">
@@ -304,30 +303,30 @@ function App() {
           </div>
         </div>
       </section>
-      <hr />
 
       <section id="project">
         <div className='min-h-screen flex flex-col items-center justify-center py-10'>
           <h1 className="text-3xl font-bold font-mono pb-20 text-center dark:text-slate-200">
             Projects
           </h1>
-          <div className="flex flex-col sm:flex-row justify-center pb-10 items-center">
+
+          <div className="grid flex-col sm:grid-cols-4 justify-center pb-10 items-center">
+
             <AnimatedComponent>
-              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900">
+              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900 hover:scale-105">
                 <div className="justify-center flex">
                   <img src="/images/online-shop.png" alt="contoh" className="h-48" />
                 </div>
                 <h2 className="text-md font-bold mt-2 dark:text-slate-200 mb-2">Online Shop</h2>
-                <p className='dark:text-slate-200 text-sm mb-1'>With NodeJs, PostgreSQL and NextJs</p>
-                <p className='dark:text-slate-200 text-sm'>This online shop website is intended to provide all baby needs.</p>
+                <p className='dark:text-slate-200 text-sm mb-1'>With Javascript, Express.js, PostgreSQL and Next.js. This online shop website is intended to provide all baby needs.</p>
                 <div className="flex justify-end mt-4">
                   <a href="https://github.com/groupfswd" target="_blank">
-                    <button className="bg-purple-500 hover:bg-purple-400 text-white py-3 px-5 rounded mr-2">
-                      <FaCode />
+                    <button className="bg-purple-700 hover:bg-purple-500 text-white py-2 px-4 rounded-full mr-2">
+                      Repository
                     </button>
                   </a>
                   {/* <a href=""> */}
-                  <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded">
+                  <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded-full">
                     Visit
                   </button>
                   {/* </a> */}
@@ -336,7 +335,7 @@ function App() {
             </AnimatedComponent>
 
             <AnimatedComponent>
-              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900">
+              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900 hover:scale-105">
                 <a href="https://youtu.be/xPO_6Bx20wk?si=iFcnhg57CtZPrxzc" target='_blank'>
                   <div className="justify-center flex relative group">
                     <img src="/images/web-note.png" alt="contoh" className="h-48 object-cover" />
@@ -352,16 +351,15 @@ function App() {
                   </div>
                 </a>
                 <h2 className="text-md font-bold mt-2 dark:text-slate-200 mb-2">My Note</h2>
-                <p className='dark:text-slate-200 text-sm mb-1'>With NodeJs, PostgreSQL and ReactJs</p>
-                <p className='dark:text-slate-200 text-sm'>This website makes it easy to record all important things easily.(In development)</p>
+                <p className='dark:text-slate-200 text-sm mb-1'>With Javascript, Express.js, PostgreSQL and React.js. This website makes it easy to record all important things easily.(In development)</p>
                 <div className="flex justify-end mt-4">
                   <a href="https://github.com/amufid/server_mynote" target="_blank">
-                    <button className="bg-purple-500 hover:bg-purple-400 text-white py-3 px-5 rounded mr-2">
-                      <FaCode />
+                    <button className="bg-purple-700 hover:bg-purple-500 text-white py-2 px-4 rounded-full mr-2">
+                      Repository
                     </button>
                   </a>
                   {/* <a href="#"> */}
-                  <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded">
+                  <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded-full">
                     Visit
                   </button>
                   {/* </a> */}
@@ -370,21 +368,20 @@ function App() {
             </AnimatedComponent>
 
             <AnimatedComponent>
-              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900">
+              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900 hover:scale-105">
                 <div className="justify-center flex">
                   <img src="/images/web-film.png" alt="contoh" className="h-48" />
                 </div>
                 <h2 className="text-md font-bold mt-2 dark:text-slate-200 mb-2">Search Film</h2>
-                <p className='dark:text-slate-200 text-sm mb-1'>With Reactjs and Film API</p>
-                <p className='dark:text-slate-200 text-sm'>This website displays popular films and can search for film titles.</p>
+                <p className='dark:text-slate-200 text-sm mb-1'>With Javascript, React.js and Film API. This website displays popular films and can search for film titles.</p>
                 <div className="flex justify-end mt-4">
                   <a href="https://github.com/amufid/movie_reactjs_api.git" target="_blank">
-                    <button className="bg-purple-500 hover:bg-purple-400 text-white py-3 px-5 rounded mr-2">
-                      <FaCode />
+                    <button className="bg-purple-700 hover:bg-purple-500 text-white py-2 px-4 rounded-full mr-2">
+                      Repository
                     </button>
                   </a>
                   <a href="https://reactjs-movie-wine.vercel.app/" target='_blank'>
-                    <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded">
+                    <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded-full">
                       Visit
                     </button>
                   </a>
@@ -393,7 +390,7 @@ function App() {
             </AnimatedComponent>
 
             <AnimatedComponent>
-              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900">
+              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900 hover:scale-105">
                 <a href="https://www.youtube.com/watch?v=BHRqfrj3kyE" className='hover:opacity-65' target='_blank'>
                   <div className="justify-center flex relative group">
                     <img src="https://i.ibb.co.com/DkJYrqN/Screenshot-2024-07-13-203338.png" alt="contoh" className="h-48 object-cover" />
@@ -409,31 +406,52 @@ function App() {
                   </div>
                 </a>
                 <h2 className="text-md font-bold mt-2 dark:text-slate-200 mb-2">ChatApp</h2>
-                <p className='dark:text-slate-200 text-sm mb-1'>With Nodejs, MongoDB and Reactjs</p>
-                <p className='dark:text-slate-200 text-sm'>This is a real time web chat with the socket.io library. (In development)</p>
+                <p className='dark:text-slate-200 text-sm mb-1'>With Javascript, Express.js, MongoDB and React.js. This is a real time web chat with the socket.io library. (In development)</p>
                 <div className="flex justify-end mt-4">
                   <a href="https://github.com/amufid/chat-app-websocket.git" target="_blank">
-                    <button className="bg-purple-500 hover:bg-purple-400 text-white py-3 px-5 rounded mr-2">
-                      <FaCode />
+                    <button className="bg-purple-700 hover:bg-purple-500 text-white py-2 px-4 rounded-full mr-2">
+                      Repository
                     </button>
                   </a>
                   {/* <a href="" target='_blank'> */}
-                  <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded">
+                  <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded-full">
                     Visit
                   </button>
                   {/* </a> */}
                 </div>
               </div>
             </AnimatedComponent>
+
+            <AnimatedComponent>
+              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl bg-slate-200 dark:bg-sky-900 hover:scale-105">
+                <div className="justify-center flex relative group">
+                  <img src="/images/ss-products.png" alt="contoh" className="h-48 object-cover" />
+                </div>
+                <h2 className="text-md font-bold mt-2 dark:text-slate-200 mb-2">Product Management</h2>
+                <p className='dark:text-slate-200 text-sm mb-1'>With Typescript, Express.js, PostgreSQL and Next.js. This website is used to manage warehouse inventory. (In development)</p>
+                <div className="flex justify-end mt-4">
+                  <a href="https://github.com/amufid/product-management" target="_blank">
+                    <button className="bg-purple-700 hover:bg-purple-500 text-white py-2 px-4 rounded-full mr-2">
+                      Repository
+                    </button>
+                  </a>
+                  {/* <a href="" target='_blank'> */}
+                  <button className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 rounded-full">
+                    Visit
+                  </button>
+                  {/* </a> */}
+                </div>
+              </div>
+            </AnimatedComponent>
+
           </div>
         </div>
       </section>
-      <hr />
 
       <section id="contact">
         <AnimatedComponent>
           <div className="min-h-screen flex flex-col items-center justify-center">
-            <div className="flex flex-col justify-center rounded-md mx-auto w-[350px] bg-slate-200 dark:bg-sky-900 shadow-lg">
+            <div className="flex flex-col justify-center rounded-md mx-auto w-[350px] bg-slate-200 dark:bg-sky-900 hover:scale-105 shadow-lg">
               <h1 className="text-3xl font-bold font-mono text-center pt-7 dark:text-slate-200">
                 Contact Me
               </h1>
@@ -481,7 +499,7 @@ function App() {
         <footer>
           <div className="bg-sky-500 py-7 dark:bg-sky-900">
             <div>
-              <p className="text-center text-xl mb-5 text-gray-700 font-mono dark:text-slate-200">Social Media</p>
+              <p className="text-center text-xl mb-5 text-gray-700 font-mono dark:text-slate-200">Find me</p>
               <div className="flex justify-center gap-3 my-5">
                 <a target="_blank" href="https://www.linkedin.com/in/abdul-mufid-5608aa249?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BGHsMb4rxR7Ccskp0By5ufA%3D%3D">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" className='dark:text-slate-200' height="30" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
