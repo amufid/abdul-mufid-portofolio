@@ -1,4 +1,3 @@
-// src/TypingEffect.js
 import { useState, useEffect } from 'react';
 
 const TypingEffect = ({ text, speed }) => {
