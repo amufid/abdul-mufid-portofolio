@@ -56,6 +56,7 @@ html {
 @font-palette-values --Mint {
   font-family: Rocher;
   base-palette: 7;
+  color: blue;
 }
 
 .mint {
@@ -64,5 +65,112 @@ html {
 }
 
 .photo-profile:hover {
-  box-shadow: 0 15px 30px rgba(255, 0, 255, 0.511);
+  box-shadow: 0px 15px 30px rgba(0, 94, 255, 0.459);
+}
+
+/* ---  */
+
+.header-title {
+  font-family: optima, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* animate shake  */
+.shake {
+  animation: shake 2s ease infinite;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+/* animate pulse */
+.pulse {}
+
+.pulse:hover {
+  animation: pulse 2s ease-in-out alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* animate flash */
+.flash {
+  animation: flash 800ms ease infinite alternate;
+}
+
+@keyframes flash {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* nav  */
+nav ul {
+  list-style: none;
+  align-items: center;
+}
+
+nav li {
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+}
+
+nav a {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav a:hover {
+  color: #0155ff;
+}
+
+nav a.active {
+  width: 100%;
+  color: #f8f8f8;
+  background-color: #0683ffc9;
+  padding: 10px 15px 10px 15px;
+  margin: 0px;
+  border-radius: 10px;
+  animation: active-nav 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes active-nav {
+  0% {
+    transform: translateX(-100%) scale(0.5);
+  }
+
+  100% {
+    transform: translateX(0px) scale(1);
+  }
 }
