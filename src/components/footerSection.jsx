@@ -1,9 +1,9 @@
 export default function FooterSection() {
   return (
     <footer>
-      <div className="bg-sky-500 py-7 dark:bg-sky-950 dark:text-slate-200">
+      <div className="bg-sky-200 py-7 dark:bg-sky-950 dark:text-slate-200">
         <div>
-          <p className="text-center text-xl mb-5 font-mono ">Find me</p>
+          <p className="text-center text-xl mb-5">Find me</p>
           <div className="flex justify-center gap-3 my-5">
             <a
               target="_blank"
@@ -41,9 +41,9 @@ export default function FooterSection() {
           </div>
         </div>
         <div>
-          <p className="text-center font-mono "> Made with ❤️ by Abdul Mufid</p>
+          <p className="text-center"> Made with ❤️ by Abdul Mufid</p>
         </div>
-        <p className="text-center font-mono ">© 2024</p>
+        <p className="text-center">© 2024</p>
       </div>
     </footer>
   );

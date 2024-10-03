@@ -16,18 +16,17 @@ export default function AboutSection() {
             </div>
           </AnimatedSide>
           <div className="w-96 sm:w-[500px] text-center sm:text-left mt-5">
-            <h1 className="text-3xl font-bold font-mono mb-7 dark:text-slate-200">
+            <h1 className="text-3xl font-bold mb-7 dark:text-slate-200">
               About me
             </h1>
-            <p className="text-md font-serif dark:text-slate-200 text-justify">
-              I graduated from Institut Teknologi Nasional Malang with a degree
-              in Informatics Engineering. I am passionate and enthusiastic about
-              developing web applications. I ready to contribute with the skills
-              I gained from a bootcamp at Rakamin. I have experience building
-              web applications using HTML, CSS, JavaScript, Tailwind CSS and
-              React.js, and I am familiar with tools like Git. I can create a
-              restful API with Nodejs Expressjs with a Postgresql or My Sql
-              databases.
+            <p className="text-md dark:text-slate-200 text-justify">
+              {`I’m a front-end developer with a passion for creating responsive,
+              user-friendly web applications using HTML, CSS, JavaScript,
+              Tailwind CSS, and React.js. While my focus is on front-end
+              development, I also have experience working on the backend,
+              building RESTful APIs with Node.js and Express.js, and managing
+              databases like PostgreSQL and MySQL. I'm excited to contribute my
+              skills to impactful projects.`}
             </p>
           </div>
         </div>

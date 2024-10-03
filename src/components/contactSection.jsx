@@ -6,13 +6,9 @@ export default function ContactSection() {
       <AnimatedComponent>
         <div className="min-h-screen flex flex-col items-center justify-center py-5">
           <div className="flex flex-col justify-center rounded-md mx-auto w-[350px] border border-slate-500 shadow-lg dark:text-slate-200">
-            <h1 className="text-3xl font-bold font-mono text-center pt-7">
-              Contact Me
-            </h1>
+            <h1 className="text-3xl font-bold text-center pt-7">Contact me</h1>
             <div className="w-full px-5 mt-5">
-              <label className="block text-md font-bold mb-2 font-mono">
-                Email
-              </label>
+              <label className="block text-md font-semibold mb-2">Email</label>
               <input
                 type="text"
                 placeholder="Email"
@@ -20,7 +16,7 @@ export default function ContactSection() {
               />
             </div>
             <div className="w-full px-5 mt-5">
-              <label className="block text-md font-bold mb-2 font-mono">
+              <label className="block text-md font-semibold mb-2">
                 Phone number
               </label>
               <input
@@ -30,8 +26,7 @@ export default function ContactSection() {
               />
             </div>
             <div className="w-full px-5 mt-5">
-              <label className="block text-md font-bold mb-2 font-mono">
-                Message
+              <label className="block text-md font-semibold mb-2">
               </label>
               <textarea
                 type="textarea"
