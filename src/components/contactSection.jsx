@@ -27,7 +27,6 @@ export default function ContactSection() {
             </div>
             <div className="w-full px-5 mt-5">
               <label className="block text-md font-semibold mb-2">
-                Message
               </label>
               <textarea
                 type="textarea"
