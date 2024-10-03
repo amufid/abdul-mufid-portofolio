@@ -1,5 +1,5 @@
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const AnimatedSection = ({ children }) => {
   const { ref, inView } = useInView({
@@ -16,14 +16,14 @@ const AnimatedSection = ({ children }) => {
     <motion.div
       ref={ref}
       initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
+      animate={inView ? "visible" : "hidden"}
       variants={variants}
       transition={{ duration: 1.5 }}
-      className='relative'
+      className="relative"
     >
       {children}
     </motion.div>
-  )
-}
+  );
+};
 
 export default AnimatedSection;
