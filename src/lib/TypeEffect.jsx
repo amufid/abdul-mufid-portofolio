@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const TypingEffect = ({ text, speed }) => {
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
