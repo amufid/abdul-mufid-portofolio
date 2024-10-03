@@ -61,6 +61,7 @@ export default function SkillsSection() {
               <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
                 <img src="/images/reactjs.png" alt="reactjs" />
                 <p className="text-center dark:text-slate-200 text-sm">
+                  React.js
                 </p>
               </div>
               <div className="mx-2 w-20 sm:w-24 my-5 rounded-md p-2 shadow-md hover:shadow-2xl hover:scale-105">
