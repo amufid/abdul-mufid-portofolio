@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 .fade-in {
@@ -148,7 +154,7 @@ nav li {
 }
 
 nav a {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav a:hover {
@@ -162,7 +168,7 @@ nav a.active {
   padding: 10px 15px 10px 15px;
   margin: 0px;
   border-radius: 10px;
-  animation: active-nav 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: active-nav 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes active-nav {

@@ -17,18 +17,18 @@ export default function CoverSection() {
             <div className="flex flex-col pr-0 sm:pr-80 dark:text-slate-200">
               <div className="pb-5 pt-16 sm:pt-10">
                 <div className="flex flex-row">
-                  <h1 className="text-2xl sm:text-3xl font-bold font-mono mb-3 mr-3">
+                  <h1 className="text-2xl sm:text-3xl font-bold mb-3 mr-3">
                     Hi Everyone
                   </h1>
                   <p className="shake text-2xl sm:text-3xl">👋</p>
                 </div>
-                <p className="text-2xl sm:text-3xl font-mono mb-3">
+                <p className="text-2xl sm:text-3xl mb-3">
                   <TypeEffect text="I'm Abdul Mufid" speed={130} />
                 </p>
                 {showText ? (
                   ""
                 ) : (
-                  <p className="text-2xl sm:text-3xl font-mono mb-3">
+                  <p className="text-2xl sm:text-3xl mb-3">
                     <TypeEffect text="Frontend Developer" speed={130} />
                     <span className="flash">|</span>
                   </p>
