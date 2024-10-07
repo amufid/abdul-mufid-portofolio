@@ -60,7 +60,7 @@ export default function NavSection(props) {
                     className={
                       activeSection === link.replace("#", "")
                         ? "active"
-                        : "w-20 h-10 text-slate-700 text-md font-medium dark:text-slate-200 hover:text-sky-500 rounded-sm"
+                        : "w-20 h-10 text-slate-700 text-md font-medium dark:text-slate-200 hover:text-sky-500 dark:hover:text-sky-500 rounded-sm"
                     }
                   >
                     {link.replace("#", "")}
