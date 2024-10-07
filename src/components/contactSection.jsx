@@ -4,7 +4,7 @@ export default function ContactSection() {
   return (
     <section id="Contact">
       <AnimatedComponent>
-        <div className="min-h-screen flex flex-col items-center justify-center py-5">
+        <div className="flex flex-col items-center justify-center py-20">
           <div className="flex flex-col justify-center rounded-md mx-auto w-[350px] border border-slate-500 shadow-lg dark:text-slate-200">
             <h1 className="text-3xl font-bold text-center pt-7">Contact me</h1>
             <div className="w-full px-5 mt-5">

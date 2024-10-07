@@ -6,10 +6,12 @@ import SkillsSection from "./components/skillsSection";
 import ProjectSection from "./components/projectSection";
 import ContactSection from "./components/contactSection";
 import FooterSection from "./components/footerSection";
+import MetaDescription from "./components/metaDescription";
 
 function App() {
   return (
     <div className="dark:bg-slate-900">
+      <MetaDescription />
       <NavSection>
         <CoverSection />
         <AboutSection />

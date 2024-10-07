@@ -3,11 +3,11 @@ import AnimatedSide from "../lib/AnimatedSide";
 export default function SkillsSection() {
   return (
     <section id="Skills">
-      <div className="min-h-screen flex flex-col items-center justify-center py-10">
+      <div className="flex flex-col items-center justify-center py-20">
         <h1 className="text-3xl font-bold mb-3 text-center pb-5 dark:text-slate-200">
           Skills
         </h1>
-        <div className="flex flex-col px-10 sm:px-52 justify-center mx-auto">
+        <div className="flex flex-col sm:px-10 md:px-10 xl:px-52 justify-center mx-auto">
           <AnimatedSide from="left">
             <h2 className="font-bold text-center text-xl dark:text-slate-200">
               Backend
