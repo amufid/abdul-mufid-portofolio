@@ -12,23 +12,21 @@ export default function CoverSection() {
   return (
     <section id="Home">
       <div className="bg-center h-screen w-full flex py-7 items-center">
-        <div className="flex flex-col-reverse sm:flex-row h-[600px] w-full justify-center items-center ">
+        <div className="flex flex-col-reverse sm:flex-row h-[600px] w-full justify-center items-center">
           <AnimatedComponent>
-            <div className="flex flex-col pr-0 sm:pr-80 dark:text-slate-200">
-              <div className="pb-5 pt-16 sm:pt-10">
+            <div className="flex flex-col sm:pr-0 md:pr-28 xl:pr-80 dark:text-slate-200">
+              <div className="pt-16 md:pt-0 xl:pt-0">
                 <div className="flex flex-row">
-                  <h1 className="text-2xl sm:text-3xl font-bold mb-3 mr-3">
-                    Hi Everyone
-                  </h1>
-                  <p className="shake text-2xl sm:text-3xl">👋</p>
+                  <h1 className="text-3xl font-bold mb-3 mr-3">Hi Everyone</h1>
+                  <p className="shake text-3xl">👋</p>
                 </div>
-                <p className="text-2xl sm:text-3xl mb-3">
+                <p className="text-3xl mb-3">
                   <TypeEffect text="I'm Abdul Mufid" speed={130} />
                 </p>
                 {showText ? (
                   ""
                 ) : (
-                  <p className="text-2xl sm:text-3xl mb-3">
+                  <p className="text-3xl mb-3">
                     <TypeEffect text="Frontend Developer" speed={130} />
                     <span className="flash">|</span>
                   </p>
@@ -37,7 +35,7 @@ export default function CoverSection() {
               <div className="flex flex-row items-center">
                 <div>
                   <a href="https://wa.link/vjqy4t" target="_blank">
-                    <button className="bg-green-600 px-4 py-3 text-sky-100 text-md rounded-full shadow-md hover:bg-green-500 flex flex-row mr-3">
+                    <button className="px-4 py-3 text-sky-100 text-md rounded-full shadow-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600 background-animate flex flex-row mr-3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -70,9 +68,9 @@ export default function CoverSection() {
             </div>
           </AnimatedComponent>
           <AnimatedComponent>
-            <div className="pt-20 sm:pt-0 pulse">
+            <div className="bounce">
               <img
-                className="photo-profile w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] rounded-full object-cover border-4 border-sky-600 dark:border-sky-700 transition-shadow duration-300"
+                className="photo-profile w-72 md:w-[300px] xl:w-[300px] h-72 md:h-[300px] xl:h-[300px] rounded-full object-cover border-4 hover:border-0 border-sky-600 dark:border-sky-700 transition-shadow duration-300"
                 src="/images/me2.png"
                 alt="me"
               />

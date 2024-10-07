@@ -19,9 +19,9 @@ export default function ProjectSection() {
 
   return (
     <section id="Projects">
-      <div className="min-h-screen flex flex-col items-center justify-center dark:text-slate-200">
-        <h1 className="text-3xl font-bold pb-20 text-center">Projects</h1>
-        <div className="grid flex-col sm:grid-cols-4 justify-center pb-10 items-center">
+      <div className="flex flex-col items-center justify-center dark:text-slate-200 py-20">
+        <h1 className="text-3xl font-bold pb-10 text-center">Projects</h1>
+        <div className="grid sm:flex-col md:grid-cols-3 xl:grid-cols-4 justify-center pb-10 items-center">
           {projects.map((project, index) => (
             <AnimatedComponent key={index}>
               <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl border border-slate-500 hover:scale-105">
