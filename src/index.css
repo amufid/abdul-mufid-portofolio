@@ -175,6 +175,10 @@ nav a.active {
   animation: active-nav 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+nav a.active:hover {
+  background-color: #0683ff81;
+}
+
 @keyframes active-nav {
   0% {
     transform: translateX(-100%) scale(0.5);
@@ -202,4 +206,33 @@ nav a.active {
   50% {
     background-position: 100% 50%;
   }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  padding: 0.25em 0.5em;
+  background-color: rgb(0, 119, 255);
+  color: #fff;
+  text-align: center;
+  border-radius: 0.25em;
+  white-space: nowrap;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 100%;
+  transition-property: visibility;
+  transition-delay: 0s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  transition-delay: 0.3s;
 }
