@@ -12,7 +12,7 @@ export default function FooterSection() {
             <div className="tooltip">
               <a
                 target="_blank"
-                href="https://www.linkedin.com/in/abdul-mufid-5608aa249?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BGHsMb4rxR7Ccskp0By5ufA%3D%3D"
+                href="www.linkedin.com/in/abdul-mufid"
               >
                 <FaLinkedin className="text-4xl hover:text-blue-600" />
                 <div className="tooltip-text">Linked In</div>
