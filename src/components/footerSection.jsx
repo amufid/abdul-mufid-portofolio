@@ -10,10 +10,7 @@ export default function FooterSection() {
           <p className="text-center text-xl mb-5">Find me</p>
           <div className="flex justify-center gap-3 my-5">
             <div className="tooltip">
-              <a
-                target="_blank"
-                href="www.linkedin.com/in/abdul-mufid"
-              >
+              <a target="_blank" href="www.linkedin.com/in/abdul-mufid">
                 <FaLinkedin className="text-4xl hover:text-blue-600" />
                 <div className="tooltip-text">Linked In</div>
               </a>
