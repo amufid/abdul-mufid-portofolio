@@ -5,7 +5,7 @@ import { FaGithubSquare } from "react-icons/fa";
 export default function FooterSection() {
   return (
     <footer>
-      <div className="bg-sky-200 py-7 dark:bg-sky-950 dark:text-slate-200">
+      <div className="py-7 dark:text-slate-200 border-t border-slate-500">
         <div>
           <p className="text-center text-xl mb-5">Find me</p>
           <div className="flex justify-center gap-3 my-5">

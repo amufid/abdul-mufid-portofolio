@@ -30,8 +30,8 @@ function SwitchTheme() {
   return (
     <div className="ml-3">
       <button onClick={() => darkModeHandler()}>
-        {dark && <IoSunny className="h-6 w-6 text-yellow-100" />}
-        {!dark && <IoMoon className="h-6 w-6 text-yellow-300" />}
+        {dark && <IoSunny className="h-6 w-6 text-yellow-200" />}
+        {!dark && <IoMoon className="h-6 w-6 text-yellow-500" />}
       </button>
     </div>
   );
