@@ -45,7 +45,7 @@ export default function NavSection(props) {
   return (
     <>
       <nav>
-        <div className="flex grid-cols-4 backdrop-opacity-10 backdrop-invert bg-white/20 dark:bg-white/10 py-2 px-5 sm:px-20 justify-between shadow-md top-0 fixed w-full items-center z-20">
+        <div className="flex grid-cols-4 backdrop-opacity-10 backdrop-invert bg-white/50 dark:bg-black/50 py-2 sm:py-1 px-5 sm:px-20 justify-between shadow-md top-0 fixed w-full items-center z-20 border-b border-slate-300 dark:border-slate-800">
           <div>
             <h1 className="header-title text-stone-900 dark:text-slate-200">
               Abdul Mufid
@@ -59,21 +59,22 @@ export default function NavSection(props) {
                     href={"#" + link}
                     className={
                       activeSection === link.replace("#", "")
-                        ? "active"
-                        : "w-20 h-10 text-slate-700 text-md font-medium dark:text-slate-200 hover:text-sky-500 dark:hover:text-sky-500 rounded-sm"
+                        ? "active dark:text-slate-200"
+                        : "px-[10px] dark:text-slate-200 hover:text-sky-500 dark:hover:text-sky-500 font-medium"
+                      // w-20 h-10 text-slate-700 px-[10px] text-md font-medium dark:text-slate-200 hover:text-sky-500 dark:hover:text-sky-500 rounded-sm
                     }
                   >
                     {link.replace("#", "")}
                   </a>
                 </li>
               ))}
-              <li>
+              <li className="mt-[5px] mb-[-2px]">
                 <SwitchTheme />
               </li>
             </ul>
           </div>
           {/* mobile mode  */}
-          <div className="flex sm:hidden ml-32 mr-5">
+          <div className="flex sm:hidden ml-32 mr-5 mt-[5px] mb-[-2px]">
             <SwitchTheme />
           </div>
           <div className="flex sm:hidden dark:text-slate-200">
@@ -90,15 +91,15 @@ export default function NavSection(props) {
         </div>
         <div className="flex sm:hidden text-sky-950 dark:text-slate-100">
           <div
-            className={`block ${
+            className={`min-h-screen block ${
               menuOpen ? "block delay-1000" : "hidden delay-1000"
-            } fixed w-full mt-[53px] py-5 items-center z-50 bg-sky-100 dark:bg-sky-950`}
+            } fixed w-full mt-[53px] py-5 items-center z-50 bg-white dark:bg-slate-950`}
           >
             <div className="flex flex-col">
               {items.map((link, index) => (
                 <a
                   href={`/#${link}`}
-                  className="cursor-pointer hover:scale-110 py-4 px-5 text-xl font-semibold hover:text-blue-500"
+                  className="cursor-pointer hover:scale-110 py-7 px-5 text-xl font-medium hover:text-blue-500"
                   onClick={toggleMenu}
                   key={index}
                 >

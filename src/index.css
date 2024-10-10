@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --blue-custom: #0683ffc9;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -53,29 +57,10 @@ body {
   }
 }
 
-/* header name  */
-@font-face {
-  font-family: 'Rocher';
-  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
-}
-
-@font-palette-values --Mint {
-  font-family: Rocher;
-  base-palette: 7;
-  color: blue;
-}
-
-.mint {
-  font-family: 'Rocher';
-  font-palette: --Mint;
-}
-
 .photo-profile:hover {
   background-color: rgba(0, 94, 255, 0.415);
   box-shadow: 0px 0px 90px rgba(0, 94, 255, 0.692);
 }
-
-/* ---  */
 
 .header-title {
   font-family: optima, sans-serif;
@@ -154,29 +139,24 @@ nav ul {
 
 nav li {
   display: inline-block;
-  padding: 10px 10px 10px 10px;
+  padding: 7px 10px 7px 10px;
+  border-bottom: 3px solid #ffffff00;
 }
 
-nav a {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+nav li:hover {
+  color: var(--blue-custom);
 }
 
-nav a:hover {
-  color: #0155ff;
+nav li .active {
+  position: relative;
+  padding: 10px 10px 19px 10px;
+  border-radius: 0;
+  border-bottom: 3px solid var(--blue-custom);
+  font-weight: bold;
 }
 
-nav a.active {
-  width: 100%;
-  color: #f8f8f8;
-  background-color: #0683ffc9;
-  padding: 10px 15px 10px 15px;
-  margin: 0px;
-  border-radius: 10px;
-  animation: active-nav 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-nav a.active:hover {
-  background-color: #0683ff81;
+nav li .active:hover {
+  color: var(--blue-custom);
 }
 
 @keyframes active-nav {
@@ -217,7 +197,7 @@ nav a.active:hover {
 .tooltip .tooltip-text {
   visibility: hidden;
   padding: 0.25em 0.5em;
-  background-color: rgb(0, 119, 255);
+  background-color: var(--blue-custom);
   color: #fff;
   text-align: center;
   border-radius: 0.25em;

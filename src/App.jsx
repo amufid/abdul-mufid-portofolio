@@ -10,7 +10,7 @@ import MetaDescription from "./components/metaDescription";
 
 function App() {
   return (
-    <div className="dark:bg-slate-900">
+    <div className="dark:bg-slate-950">
       <MetaDescription />
       <NavSection>
         <CoverSection />
