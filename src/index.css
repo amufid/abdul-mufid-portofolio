@@ -155,8 +155,8 @@ nav li .active {
   font-weight: bold;
 }
 
-nav a.active:hover {
-  background-color: #0683ff81;
+nav li .active:hover {
+  color: var(--blue-custom);
 }
 
 @keyframes active-nav {
