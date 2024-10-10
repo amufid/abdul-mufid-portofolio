@@ -159,6 +159,10 @@ nav li .active:hover {
   color: var(--blue-custom);
 }
 
+nav a.active:hover {
+  background-color: #0683ff81;
+}
+
 @keyframes active-nav {
   0% {
     transform: translateX(-100%) scale(0.5);
