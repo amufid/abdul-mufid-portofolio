@@ -24,7 +24,7 @@ export default function ProjectSection() {
         <div className="grid sm:flex-col md:grid-cols-3 xl:grid-cols-4 justify-center pb-10 items-center">
           {projects.map((project, index) => (
             <AnimatedComponent key={index}>
-              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl border border-slate-500 hover:scale-105">
+              <div className="rounded-md w-[310px] p-3 mx-2 my-2 shadow-xl border border-slate-300 dark:border-slate-600 hover:scale-105">
                 <div className="justify-center flex">
                   <img src={project.image} alt="contoh" className="h-48" />
                 </div>
@@ -49,7 +49,10 @@ export default function ProjectSection() {
                     </button>
                   </a>
                   <a href={project.web} target="_blank">
-                    <button className="border-2 border-blue-500 hover:bg-blue-500 py-2 px-4 rounded-full">
+                    <button
+                      className="border-2 border-blue-500 hover:bg-blue-500 py-2 px-4 rounded-full"
+                      disabled={!project.web}
+                    >
                       Visit
                     </button>
                   </a>

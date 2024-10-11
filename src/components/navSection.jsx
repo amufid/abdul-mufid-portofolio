@@ -67,10 +67,8 @@ export default function NavSection(props) {
                   </a>
                 </li>
               ))}
-              <li className="mt-[5px] mb-[-2px]">
-                <SwitchTheme />
-              </li>
             </ul>
+            <SwitchTheme />
           </div>
           {/* mobile mode  */}
           <div className="flex sm:hidden ml-32 mr-5 mt-[5px] mb-[-2px]">
