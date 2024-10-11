@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { IoMoon } from "react-icons/io5";
-import { IoSunny } from "react-icons/io5";
+import { IoMoonOutline } from "react-icons/io5";
+import { LuSunMedium } from "react-icons/lu";
 
 function SwitchTheme() {
   const [dark, setDark] = useState(false);
@@ -28,10 +28,10 @@ function SwitchTheme() {
   };
 
   return (
-    <div className="ml-3">
+    <div className="flex items-center ml-3 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white">
       <button onClick={() => darkModeHandler()}>
-        {dark && <IoSunny className="h-6 w-6 text-yellow-200" />}
-        {!dark && <IoMoon className="h-6 w-6 text-yellow-500" />}
+        {dark && <LuSunMedium className="h-6 w-6" />}
+        {!dark && <IoMoonOutline className="h-6 w-6" />}
       </button>
     </div>
   );
