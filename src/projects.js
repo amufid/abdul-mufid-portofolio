@@ -37,7 +37,7 @@ export const projects = [
     description:
       " With Typescript, Express.js, PostgreSQL and Next.js. This website is used to manage warehouse inventory. (In development)",
     repo: "https://github.com/amufid/product-management",
-    web: "",
+    web: "https://warehouse-x.vercel.app/",
   },
   {
     image: "/images/ecommerce-catalog.png",

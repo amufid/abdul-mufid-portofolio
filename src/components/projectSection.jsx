@@ -5,8 +5,9 @@ import { projects } from "../projects";
 
 export default function ProjectSection() {
   const [showTextArray, setShowTextArray] = useState(
+    // Inisialisasi array
     Array(projects.length).fill(false)
-  ); // Inisialisasi array
+  );
 
   const handleShowText = (index) => {
     setShowTextArray((prev) => {
@@ -48,14 +49,13 @@ export default function ProjectSection() {
                       Repository
                     </button>
                   </a>
-                  <a href={project.web} target="_blank">
-                    <button
-                      className="border-2 border-blue-500 hover:bg-blue-500 py-2 px-4 rounded-full"
-                      disabled={!project.web}
-                    >
-                      Visit
-                    </button>
-                  </a>
+                  {project.web && (
+                    <a href={project.web} target="_blank">
+                      <button className="border-2 border-blue-500 hover:bg-blue-500 py-2 px-4 rounded-full">
+                        Visit
+                      </button>
+                    </a>
+                  )}
                 </div>
               </div>
             </AnimatedComponent>
