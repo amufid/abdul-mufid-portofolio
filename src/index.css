@@ -149,6 +149,7 @@ nav li:hover {
 
 nav li .active {
   position: relative;
+  color: var(--blue-custom) !important;
   padding: 10px 10px 19px 10px;
   border-radius: 0;
   border-bottom: 3px solid var(--blue-custom);
