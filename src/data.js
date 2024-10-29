@@ -48,3 +48,84 @@ export const projects = [
     web: "",
   },
 ];
+
+export const backend = [
+  {
+    name: "Node.js",
+    image: "/images/nodejs.png",
+  },
+  {
+    name: "Express.js",
+    image: "/images/express.png",
+  },
+  {
+    name: "Laravel",
+    image: "/images/laravel.png",
+  },
+  {
+    name: "PostgreSQL",
+    image: "/images/postgresql.png",
+  },
+  {
+    name: "MongoDB",
+    image: "https://infinapps.com/wp-content/uploads/2018/10/mongodb-logo.png",
+  },
+];
+
+export const frontend = [
+  {
+    name: "React.js",
+    image: "/images/reactjs.png",
+  },
+  {
+    name: "Next.js",
+    image: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
+  },
+  {
+    name: "Vue.js",
+    image: "/images/vuejs.png",
+  },
+  {
+    name: "HTML",
+    image: "/images/html.png",
+  },
+  {
+    name: "CSS",
+    image: "/images/css.png",
+  },
+  {
+    name: "Tailwind CSS",
+    image: "/images/tailwindcss.png",
+  },
+  {
+    name: "Bootstrap",
+    image: "/images/bootstrap.png",
+  },
+];
+
+export const tools = [
+  {
+    name: "JavaScript",
+    image: "/images/javascript.png",
+  },
+  {
+    name: "TypeScript",
+    image:
+      "https://static-00.iconduck.com/assets.00/typescript-plain-icon-256x256-ypojgpyj.png",
+  },
+  {
+    name: "Git",
+    image:
+      "https://cdn.iconscout.com/icon/free/png-256/free-git-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175218.png?f=webp&w=256",
+  },
+  {
+    name: "Github",
+    image:
+      "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
+  },
+  {
+    name: "VS Code",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png",
+  },
+];

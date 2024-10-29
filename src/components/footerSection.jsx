@@ -30,7 +30,7 @@ export default function FooterSection() {
           </div>
         </div>
         <div>
-          <p className="text-center"> Made with ❤️ by Abdul Mufid</p>
+          <p className="text-center">By Abdul Mufid</p>
         </div>
         <p className="text-center">© 2024</p>
       </div>

@@ -31,20 +31,25 @@ const ScrollToTop = () => {
         <button
           type="button"
           onClick={scrollToTop}
-          className="p-2 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-2 bg-[#0090f788] text-white rounded-full shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
             fill="none"
-            viewBox="0 0 24 24"
             stroke="currentColor"
+            strokeWidth={1.5}
+            className="size-6"
+            viewBox="0 0 24 24"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 15l7-7 7 7"
+              d="m4.5 18.75 7.5-7.5 7.5 7.5"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m4.5 12.75 7.5-7.5 7.5 7.5"
             />
           </svg>
         </button>
