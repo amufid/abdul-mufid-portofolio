@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AnimatedComponent from "../lib/AnimatedComponent";
 import { truncateText } from "../lib/TruncateText";
-import { projects } from "../projects";
+import { projects } from "../data";
 
 export default function ProjectSection() {
   const [showTextArray, setShowTextArray] = useState(
