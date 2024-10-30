@@ -8,7 +8,7 @@ const AnimatedSection = ({ children }) => {
   });
 
   const variants = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: 220 },
     visible: { opacity: 1, y: 0 },
   };
 
@@ -18,7 +18,7 @@ const AnimatedSection = ({ children }) => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={variants}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.3 }}
       className="relative"
     >
       {children}

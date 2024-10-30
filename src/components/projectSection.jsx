@@ -45,13 +45,13 @@ export default function ProjectSection() {
                 </p>
                 <div className="flex justify-end mt-4">
                   <a href={project.repo} target="_blank">
-                    <button className="border-2 border-emerald-500 hover:bg-emerald-500 py-2 px-4 rounded-full mr-2">
+                    <button className="border-2 border-emerald-500 hover:bg-emerald-500 py-2 px-4 rounded-full mr-2 btn-shadow-emerald">
                       Repository
                     </button>
                   </a>
                   {project.web && (
                     <a href={project.web} target="_blank">
-                      <button className="border-2 border-blue-500 hover:bg-blue-500 py-2 px-4 rounded-full">
+                      <button className="border-2 border-blue-500 hover:bg-blue-500 py-2 px-4 rounded-full btn-shadow-blue">
                         Visit
                       </button>
                     </a>

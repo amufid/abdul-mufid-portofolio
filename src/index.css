@@ -217,3 +217,11 @@ nav li .active:hover {
   visibility: visible;
   transition-delay: 0.3s;
 }
+
+.btn-shadow-emerald:hover {
+  box-shadow: 0px 0px 30px rgba(13, 248, 1, 0.707);
+}
+
+.btn-shadow-blue:hover {
+  box-shadow: 0px 0px 30px var(--blue-custom);
+}
