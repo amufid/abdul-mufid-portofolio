@@ -35,7 +35,7 @@ export default function CoverSection() {
               <div className="flex flex-row items-center">
                 <div>
                   <a href="https://wa.link/vjqy4t" target="_blank">
-                    <button className="px-4 py-3 text-sky-100 text-md rounded-full shadow-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600 background-animate flex flex-row mr-3">
+                    <button className="px-4 py-3 text-sky-100 text-md rounded-full shadow-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600 background-animate flex flex-row mr-3 btn-shadow-emerald">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -59,7 +59,7 @@ export default function CoverSection() {
                     href="https://drive.google.com/file/d/1DbOzXnrwd7Api1vMjtMEnozNiVdE503V/view?usp=sharing"
                     target="_blank"
                   >
-                    <button className="bg-sky-600 px-4 py-3 text-sky-100 text-md rounded-full shadow-md hover:bg-sky-500 flex flex-row">
+                    <button className="bg-sky-600 px-4 py-3 text-sky-100 text-md rounded-full shadow-md hover:bg-sky-500 flex flex-row btn-shadow-blue">
                       Download CV
                     </button>
                   </a>

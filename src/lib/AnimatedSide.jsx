@@ -8,7 +8,7 @@ export default function AnimatedSide({ children, from }) {
   });
 
   const variants = {
-    hidden: { opacity: 0, x: from === "left" ? -200 : 200 },
+    hidden: { opacity: 0, x: from === "left" ? -220 : 220 },
     visible: { opacity: 1, x: 0 },
   };
 
@@ -19,7 +19,7 @@ export default function AnimatedSide({ children, from }) {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={variants}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.3 }}
         className="w-full"
       >
         {children}
