@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TypeEffect from "../lib/TypeEffect";
 import AnimatedComponent from "../lib/AnimatedComponent";
+import { Button } from "./ui/button";
 
 export default function CoverSection() {
   const [showText, setShowText] = useState(true);
@@ -35,14 +36,17 @@ export default function CoverSection() {
               <div className="flex flex-row items-center">
                 <div>
                   <a href="https://wa.link/vjqy4t" target="_blank">
-                    <button className="px-4 py-3 text-sky-100 text-md rounded-full shadow-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600 background-animate flex flex-row mr-3 btn-shadow-emerald">
+                    <Button
+                      variant="secondary"
+                      className="hover:bg-gradient-to-r from-emerald-400  to-emerald-600 background-animate flex flex-row mr-3 btn-shadow-emerald"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="w-6 h-6 mr-2"
+                        className="w-5 h-5 mr-2"
                       >
                         <path
                           strokeLinecap="round"
@@ -51,7 +55,7 @@ export default function CoverSection() {
                         />
                       </svg>
                       Contact me
-                    </button>
+                    </Button>
                   </a>
                 </div>
                 <div>
@@ -59,18 +63,16 @@ export default function CoverSection() {
                     href="https://drive.google.com/file/d/1DbOzXnrwd7Api1vMjtMEnozNiVdE503V/view?usp=sharing"
                     target="_blank"
                   >
-                    <button className="bg-sky-600 px-4 py-3 text-sky-100 text-md rounded-full shadow-md hover:bg-sky-500 flex flex-row btn-shadow-blue">
-                      Download CV
-                    </button>
+                    <Button>Download CV</Button>
                   </a>
                 </div>
               </div>
             </div>
           </AnimatedComponent>
           <AnimatedComponent>
-            <div className="bounce">
+            <div className="bounce rounded-full border-4 hover:border-0 border-sky-600 dark:border-sky-700 transition-all duration-300">
               <img
-                className="photo-profile w-72 md:w-[300px] xl:w-[300px] h-72 md:h-[300px] xl:h-[300px] rounded-full object-cover border-4 hover:border-0 border-sky-600 dark:border-sky-700 transition-shadow duration-300"
+                className="photo-profile w-64 md:w-[300px] xl:w-[300px] h-64 md:h-[300px] xl:h-[300px] rounded-full object-cover filter grayscale transition-all duration-300 hover:filter-none"
                 src="/images/me2.png"
                 alt="me"
               />

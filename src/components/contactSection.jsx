@@ -1,4 +1,5 @@
 import AnimatedComponent from "../lib/AnimatedComponent";
+import { Button } from "./ui/button";
 
 export default function ContactSection() {
   return (
@@ -35,10 +36,10 @@ export default function ContactSection() {
                 className="w-full mt-1 px-3 py-2 border shadow-sm border-slate-300 dark:border-slate-600 dark:bg-slate-900 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
               />
             </div>
-            <div className="flex justify-end">
-              <button className="bg-blue-500 hover:bg-blue-400 rounded-md w-20 my-5 p-2 mr-5 text-white">
+            <div className="flex justify-end px-5 py-7">
+              <Button variant="primary" className="w-full">
                 Send
-              </button>
+              </Button>
             </div>
           </div>
         </div>
