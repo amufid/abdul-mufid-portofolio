@@ -1,49 +1,68 @@
 export const projects = [
   {
-    image: "/images/online-shop.png",
+    images: [
+      "https://i.ibb.co.com/Zhg4Bm0/Screenshot-2024-11-06-155254.png",
+      "/images/online-shop.png",
+      "https://i.ibb.co.com/X8YxvW5/Screenshot-2024-11-06-163809.png",
+      "https://i.ibb.co.com/2ncwHYT/Screenshot-2024-11-06-164036.png",
+    ],
     title: "Online Shop",
     description:
-      "With Javascript, Express.js, PostgreSQL and Next.js. This online shop website is intended to provide all baby needs.",
+      "With Javascript, ExpressJS, PostgreSQL and NextJS. This online shop website is intended to provide all baby needs.",
     repo: "https://github.com/groupfswd",
     web: "",
   },
   {
-    image: "/images/web-film.png",
+    images: ["/images/web-film.png"],
     title: "Search Film",
     description:
-      "With Javascript, React.js and Film API. This website displays popular films and can search for film titles.",
+      "With Javascript, ReactJS and Film API. This website displays popular films and can search for film titles.",
     repo: "https://github.com/amufid/movie_reactjs_api.git",
     web: "https://reactjs-movie-wine.vercel.app/",
   },
   {
-    image: "/images/web-note.png",
+    images: [
+      "/images/web-note.png",
+      "https://i.ibb.co.com/Qj3yn9M/Screenshot-2024-11-06-153127.png",
+      "https://i.ibb.co.com/GpxtQMM/Screenshot-2024-11-06-152602.png",
+      "https://i.ibb.co.com/yPrHZZ3/Screenshot-2024-11-06-152735.png",
+      "https://i.ibb.co.com/zJDjNrt/Screenshot-2024-11-06-153316.png",
+    ],
     title: "My Notes",
     description:
-      "With Javascript, Express.js, PostgreSQL and React.js. This website makes it easy to record all important things easily.(In development)",
+      "With Javascript, ExpressJS, PostgreSQL and ReactJS. This website makes it easy to record all important things easily.(In development)",
     repo: "https://github.com/amufid/server_mynote",
     web: "",
   },
   {
-    image: "https://i.ibb.co.com/DkJYrqN/Screenshot-2024-07-13-203338.png",
+    images: ["https://i.ibb.co.com/DkJYrqN/Screenshot-2024-07-13-203338.png"],
     title: "Chat App",
     description:
-      "With Javascript, Express.js, MongoDB and React.js. This is a real time web chat with the socket.io library. (In development)",
+      "With Javascript, ExpressJS, MongoDB and ReactJS. This is a real time web chat with the socket.io library. (In development)",
     repo: "https://github.com/amufid/chat-app-websocket.git",
     web: "",
   },
   {
-    image: "/images/ss-products.png",
+    images: [
+      "https://i.ibb.co.com/5BW7R6B/Screenshot-2024-11-06-122801.png",
+      "https://i.ibb.co.com/cv24kpv/Screenshot-2024-11-06-122227.png",
+      "https://i.ibb.co.com/wYLmzDQ/Screenshot-2024-11-06-122611.png",
+    ],
     title: "Product Management",
     description:
-      " With Typescript, Express.js, PostgreSQL and Next.js. This website is used to manage warehouse inventory. (In development)",
+      " With Typescript, ExpressJS, PostgreSQL and NextJS. This website is used to facilitate the management of warehouse inventory, product stock, product transactions. (In development)",
     repo: "https://github.com/amufid/product-management",
     web: "https://warehouse-x.vercel.app/",
   },
   {
-    image: "/images/ecommerce-catalog.png",
+    images: [
+      "/images/ecommerce-catalog.png",
+      "https://i.ibb.co.com/0Kc9S56/women.png",
+      "https://i.ibb.co.com/Rj8gx3H/loading.png",
+    ],
     title: "Ecommerce Catalog",
     description:
-      "With Vue.js and Vanilla CSS. Landing page displays product catalog with color design based on category.",
+      "With VueJS and Vanilla CSS. Landing page displays product catalog with color design based on category.",
     repo: "https://github.com/amufid/ecommerce-catalog",
     web: "",
   },
