@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SwitchTheme from "../lib/SwitchTheme";
+import SwitchTheme from "./ui/SwitchTheme";
 import { MdOutlineDensityMedium } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 

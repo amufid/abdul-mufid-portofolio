@@ -8,7 +8,7 @@ export const projects = [
     ],
     title: "Online Shop",
     description:
-      "With Javascript, ExpressJS, PostgreSQL and NextJS. This online shop website is intended to provide all baby needs.",
+      "With Javascript, ExpressJS, PostgreSQL and NextJS. This online shop website is intended to provide all baby needs. Available features are CRUD, product search, price filter, pagination, product purchasing and CMS for product management.",
     repo: "https://github.com/groupfswd",
     web: "",
   },
@@ -47,10 +47,11 @@ export const projects = [
       "https://i.ibb.co.com/5BW7R6B/Screenshot-2024-11-06-122801.png",
       "https://i.ibb.co.com/cv24kpv/Screenshot-2024-11-06-122227.png",
       "https://i.ibb.co.com/wYLmzDQ/Screenshot-2024-11-06-122611.png",
+      "https://i.ibb.co.com/JdMsSBG/Screenshot-2024-11-07-064405.png",
     ],
     title: "Product Management",
     description:
-      " With Typescript, ExpressJS, PostgreSQL and NextJS. This website is used to facilitate the management of warehouse inventory, product stock, product transactions. (In development)",
+      " With Typescript, ExpressJS, PostgreSQL and NextJS. This website is used to facilitate the management of warehouse inventory, product stock, product transactions. Available features are CRUD, transaction graphs, product search, pagination, printing transaction reports in PDF format. (In development)",
     repo: "https://github.com/amufid/product-management",
     web: "https://warehouse-x.vercel.app/",
   },

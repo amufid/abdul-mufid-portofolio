@@ -1,4 +1,3 @@
-import ScrollTop from "./lib/ScrollTop";
 import NavSection from "./components/navSection";
 import CoverSection from "./components/coverSection";
 import AboutSection from "./components/aboutSection";
@@ -7,6 +6,7 @@ import ProjectSection from "./components/projectSection";
 import ContactSection from "./components/contactSection";
 import FooterSection from "./components/footerSection";
 import MetaDescription from "./components/metaDescription";
+import ScrollToTop from "./components/ui/ScrollTop";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <ContactSection />
       </NavSection>
       <FooterSection />
-      <ScrollTop />
+      <ScrollToTop />
     </div>
   );
 }
