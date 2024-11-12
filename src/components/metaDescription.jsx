@@ -5,7 +5,7 @@ export default function MetaDescription() {
     <>
       <Helmet>
         <title>Abdul Mufid - Portofolio</title>
-        <meta name="description" content="Abdul Mufid Portofolio" />
+        <meta name="description" content="Frontend Developer Portfolio" />
       </Helmet>
     </>
   );
