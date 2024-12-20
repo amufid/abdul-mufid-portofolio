@@ -12,7 +12,7 @@ export default function ProjectSection() {
         <div className="wrapper relative grid sm:flex-col md:grid-cols-2 xl:grid-cols-3 justify-center pb-10 items-center gap-4">
           {projects.map((project, index) => (
             <AnimatedComponent key={index}>
-              <div className="card-project rounded-2xl w-auto sm:w-[330px] p-3 shadow-xl border border-slate-300 dark:border-slate-600 space-y-4">
+              <div className="card-project rounded-lg w-auto sm:w-[330px] p-3 shadow-xl border border-slate-300 dark:border-slate-600 space-y-4">
                 <div className="justify-center flex">
                   <ImageZoom image={project.images[0]} />
                 </div>
