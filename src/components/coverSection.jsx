@@ -12,11 +12,11 @@ export default function CoverSection() {
 
   return (
     <section id="Home">
-      <div className="bg-center dark:bg-bg-image bg-cover h-screen w-full flex py-7 items-center">
+      <div className="bg-center dark:bg-bg-image bg-cover !h-screen w-full flex py-7 items-center -mt-14 sm:mt-0">
         <div className="flex flex-col-reverse sm:flex-row h-[600px] w-full justify-center items-center">
           <div className="flex flex-col sm:pr-0 md:pr-28 xl:pr-80 dark:text-slate-200">
             <AnimatedComponent>
-              <div className="pt-16 md:pt-0 xl:pt-0">
+              <div className="pt-10 sm:pt-5 md:pt-0 xl:pt-0">
                 <div className="flex flex-row">
                   <h1 className="text-3xl font-bold mb-3 mr-3">Hi Everyone</h1>
                   <p className="shake text-3xl">👋</p>
@@ -36,7 +36,7 @@ export default function CoverSection() {
             </AnimatedComponent>
             {!showText && (
               <AnimatedComponent>
-                <div className="flex flex-row items-center">
+                <div className="flex flex-row items-center mt-5 sm:mt-5 xl:mt-3">
                   <div>
                     <a href="https://wa.link/vjqy4t" target="_blank">
                       <Button
@@ -74,9 +74,9 @@ export default function CoverSection() {
             )}
           </div>
           <AnimatedComponent>
-            <div className="bounce rounded-full border-4 hover:border-0 border-sky-600 dark:border-sky-700 transition-all duration-300">
+            <div className="bounce rounded-full border-4 hover:border-0 border-sky-600 dark:border-sky-700 transition-all duration-300 mt-16 sm:mt-0">
               <img
-                className="photo-profile w-60 h-60 md:w-[300px] xl:w-[300px] md:h-[300px] xl:h-[300px] rounded-full object-cover filter grayscale transition-all duration-300 hover:filter-none"
+                className="photo-profile w-60 h-60 md:w-[250px] md:h-[250px] xl:w-[300px] xl:h-[300px] rounded-full object-cover filter grayscale transition-all duration-300 hover:filter-none"
                 src="/images/saya.png"
                 alt="me"
               />
@@ -92,7 +92,7 @@ export default function CoverSection() {
         }}
       ></div>
       <div
-        className="w-full h-16 absolute -bottom-1 hidden dark:flex"
+        className="w-full h-14 sm:h-16 absolute -bottom-1 hidden dark:flex"
         style={{
           background:
             "linear-gradient(to top, rgb(10,10,10), rgba(0, 0, 0, 0))",
